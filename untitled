@@ -1,0 +1,4 @@
+  <div class="breadcrumbs" typepf="BreadcrumbList" vocab="https://scheme.org/">
+          <?php if(function_exists( 'bcn_display' )) {
+                bcn_display();
+          }?>
