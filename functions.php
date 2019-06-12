@@ -166,6 +166,17 @@ $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="di
 
 add_filter( 'jetpack_development_mode', '__return_true' );
 
+/////////////////////////
+//////Thankyou page///////
+/////////////////////////
+
+
+
+
+
+
+
+
 
 
 
