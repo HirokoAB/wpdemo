@@ -45,7 +45,9 @@
                     <?php next_post_link('%link','次へ >'); ?>
               </span>
           </div>
-
+          <div class="related">
+                <?php get_template_part('form', 'related');?>
+              </div>
           <div class="article_archive">
             <p class="latest_title">お知らせ</p>
               <div class="article_loop">
@@ -65,16 +67,6 @@
       <div class="col-sm-2">
                   <?php get_template_part('sidebar'); ?>
       </div>
-
-
-
-
-
-
-
-
-
-
 
 </div>
 </article>

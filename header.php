@@ -22,7 +22,6 @@
         <?php 
 echo do_shortcode('[smartslider3 slider=2]');
 ?>
-        <span class="pc">最近見かけた街の風景です</span>
     </div> 
   </header>
 
