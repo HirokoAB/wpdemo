@@ -163,14 +163,24 @@ $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="di
     echo $str;
 }
 
+//////////////////////////////////////////
+//jackpackのデバックモードを開示するコード///
+/////////////////////////////////////////
+
 
 add_filter( 'jetpack_development_mode', '__return_true' );
 
-/////////////////////////
-//////Thankyou page///////
-/////////////////////////
 
-
+//////////////////////////////////////////
+////カスタム投稿タイプが削除された際に////////
+///テーブルのデータを削除する///////////////
+/////////////////////////////////////////
+function my_acf_init() {
+	if (function_exists('acf_update_setting')) {
+		acf_update_setting('remove_wp_meta_box', false);
+	}
+}
+add_action('acf/init', 'my_acf_init');
 
 
 
