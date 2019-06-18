@@ -20,7 +20,10 @@
 add_theme_support( 'custom-header', $defaults );
 
 
-// 以下カスタム投稿タイプ追加の記述
+//////////////////////////////////////////
+//////カスタム投稿タイプのUIに関する記述//////
+/////////////////////////////////////////
+
 
 function cptui_register_my_cpts_infomation() {
 
@@ -64,6 +67,95 @@ function cptui_register_my_cpts_infomation() {
 	register_post_type( "infomation", $args );
 }
 
+function cptui_register_my_cpts_slider() {
+
+	/**
+	 * Post Type: スライダー画像の新規投稿.
+	 */
+
+	$labels = array(
+		"name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+		"singular_name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+		"menu_name" => __( "スライダー画像変更", "custom-post-type-ui" ),
+		"search_items" => __( "スライダー投稿画像の検索", "custom-post-type-ui" ),
+		"not_found" => __( "画像の投稿はまだありません", "custom-post-type-ui" ),
+		"not_found_in_trash" => __( "ゴミ箱内には何もありません", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "TOP画面のスライダー画像を変更するためのUI",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"delete_with_user" => false,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "slider", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "revisions" ),
+	);
+
+	register_post_type( "slider", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_slider' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 add_action( 'init', 'cptui_register_my_cpts_infomation' );
 function cptui_register_my_taxes_info() {
 
@@ -99,7 +191,7 @@ function cptui_register_my_taxes_info() {
 add_action( 'init', 'cptui_register_my_taxes_info' );
 
 //////////////////////////////////////////
-//////ウィジェットに追加に関するコード///////あ
+//////ウィジェットに追加に関するコード///////
 /////////////////////////////////////////
 
 
@@ -175,12 +267,12 @@ add_filter( 'jetpack_development_mode', '__return_true' );
 ////カスタム投稿タイプが削除された際に////////
 ///テーブルのデータを削除する///////////////
 /////////////////////////////////////////
-function my_acf_init() {
-	if (function_exists('acf_update_setting')) {
-		acf_update_setting('remove_wp_meta_box', false);
-	}
-}
-add_action('acf/init', 'my_acf_init');
+// function my_acf_init() {
+// 	if (function_exists('acf_update_setting')) {
+// 		acf_update_setting('remove_wp_meta_box', false);
+// 	}
+// }
+// add_action('acf/init', 'my_acf_init');
 
 
 
@@ -199,6 +291,16 @@ function my_php_Include($params = array()) {
  return ob_get_clean();
 }
 add_shortcode('slider', 'my_php_Include');
+
+
+
+
+
+
+
+
+
+
 
 
 
