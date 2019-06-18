@@ -111,51 +111,6 @@ function cptui_register_my_cpts_slider() {
 add_action( 'init', 'cptui_register_my_cpts_slider' );
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 add_action( 'init', 'cptui_register_my_cpts_infomation' );
 function cptui_register_my_taxes_info() {
 
@@ -202,14 +157,6 @@ function twp_setup_theme(){
 	// set_post_thumbnail_size( 300, 300, false);
 }
 add_action( 'after_setup_theme', 'twp_setup_theme' );
-
-
-
-//////////////////////////////////////////
-//////ウィジェットに追加に関するコード///////
-/////////////////////////////////////////
-
-
 
 
 /////////////////////////
@@ -284,13 +231,13 @@ define(' PAGE_SLIDE ' , 298 );
 
 
 //ショートコードを使ったphpファイルの呼び出し方法
-function my_php_Include($params = array()) {
- extract(shortcode_atts(array('file' => 'default'), $params));
- ob_start();
- include(STYLESHEETPATH . "/$file.php");
- return ob_get_clean();
+function show_contact_form() {
+  ob_start();
+  get_template_part( 'single' , 'slider' ); // partials/contact.phpの内容が表示される
+  return ob_get_clean();
 }
-add_shortcode('slider', 'my_php_Include');
+add_shortcode('slider', 'show_contact_form');
+
 
 
 

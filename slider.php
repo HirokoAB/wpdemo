@@ -19,7 +19,7 @@
     <div><img class="item"src="<?php echo wp_get_attachment_url(get_post_meta($post->ID,"slider2",true));?>"></div>
     <div><img class="item"src="<?php echo wp_get_attachment_url(get_post_meta($post->ID,"slider3",true));?>"></div>
   </div>
-　　　　    
+
 
 	  <div class="owl-carousel owl-theme">
     <div><img class="item"src="<?php echo CFS()->get( 'slider1' ); ?>" ></div>
@@ -27,11 +27,8 @@
     <div><img class="item"src="<?php echo CFS()->get( 'slider3' ); ?>"></div>
   	</div>
 
-  	   <?php $tests = wp_get_attachment_url(get_post_meta($post->ID,"slider1",true));  ?>
-        <?php var_dump($tests) ?>       
-  		 <?php var_dump( $test) ?>
-       <?php $test = CFS()->get( 'slider1' );  ?>
-       <?php var_dump( $test) ?>
+  	   <?php $test = CFS()->get( 'slider1' );  ?>
+  		<?php var_dump( $test) ?>
 
 
 
