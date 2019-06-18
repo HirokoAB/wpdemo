@@ -30,9 +30,6 @@
       <?php endif; ?>
     </div>
 
-          <?php $test = CFS()->get( 'slider1' );  ?>
-           <?php echo '配列の中の'.var_dump( $test ).'です' ?> 
-
 <?php get_footer(); ?>
 
 

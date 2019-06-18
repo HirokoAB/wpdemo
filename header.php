@@ -19,10 +19,7 @@
     <?php wp_nav_menu(); ?>
     <div class="header-container">
        <img src="<?php echo get_template_directory_uri(); ?>/img/maru.png" alt="" class="logo">
-<!--         <?php 
-echo do_shortcode('[smartslider3 slider=2]');
-?> -->
-<img src="<?php header_image();?>" alt="">
+
     </div> 
   </header>
 

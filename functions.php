@@ -191,6 +191,14 @@ add_action('acf/init', 'my_acf_init');
 define(' PAGE_SLIDE ' , 298 );
 
 
+//ショートコードを使ったphpファイルの呼び出し方法
+function my_php_Include($params = array()) {
+ extract(shortcode_atts(array('file' => 'default'), $params));
+ ob_start();
+ include(STYLESHEETPATH . "/$file.php");
+ return ob_get_clean();
+}
+add_shortcode('slider', 'my_php_Include');
 
 
 
