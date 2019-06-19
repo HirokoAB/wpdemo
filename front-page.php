@@ -1,35 +1,16 @@
 <?php get_header(); ?>
 
 
+<main>
 
-
-    
-    <?php if(!is_404()): ?>
-
-    <?php
-// カスタムヘッダーが設定されていない?
-if ( empty( get_header_image() ) ) {
-?>
+<!-- もしヘッダー画像が表示されていなければ -->
+ <?php if ( empty( get_header_image() ) ) :?> 
   <?php get_template_part( 'single' , 'slider' ); ?>
-<?php
-} else {
-?>
+<?php else :?>
   <img src="<?php header_image(); ?>">
-<?php
-}
+<?endif;?>
 
-
-
-    <div class="header-container">
-       <img src="<?php echo get_template_directory_uri(); ?>/img/maru.png" alt="" class="logo">
-      <?php get_template_part( 'single' , 'slider' ); ?>
-
-    </div> 
-    <?php endif; ?>
-
-  
-
-  <main class="articles">
+  <div class="articles">
   <div id="blog_archive">
     <h1>最近の記事一覧</h1>
     <!-- 表示件数を指定するための配列 -->
@@ -57,6 +38,7 @@ if ( empty( get_header_image() ) ) {
     </ul>
       <?php endif; ?>
     </div>
+  </div>
 
 <?php get_footer(); ?>
 
