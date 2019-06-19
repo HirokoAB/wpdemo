@@ -10,6 +10,7 @@
 
 <div class="article_archive">
             <p class="latest_title">お知らせ</p>
+           <p><?php echo single_term_title(); ?></p>
               <div class="article_loop">
                 <?php query_posts("posts_per_page=3&paged+$paged"); ?>
                 <?php get_template_part('loop', 'blog');?>
@@ -19,10 +20,3 @@
 </main>
 
 
-
-
-
-
-
-
-<?php get_footer(); ?>

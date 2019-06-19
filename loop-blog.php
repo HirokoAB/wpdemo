@@ -12,8 +12,10 @@
 		<?php foreach ( $posts as $post ):?> 
 			<div class="archive_block">
 					<span class="archive_cat">
-						<?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
-					</span>		
+						<?php $term = wp_get_post_terms( $post -> ID ,'info',array("fields" => "names")); ?>
+						<?php echo $term [0];  ?>
+					</span>	
+					
 
 					<span class="archive_date">
 						<time><?php echo get_the_date( 'Y/m/d' ); ?></time>
@@ -21,6 +23,8 @@
 
 					<?php the_title( '<h1><a href="'.esc_url( get_permalink() ).'">','</a><h1>' ); ?>
 					</div>
+
+
 				<?php endforeach; ?>
 		
 			<?php else: ?>
@@ -29,5 +33,8 @@
 		
 		<?php endif; ?>
 
+					
 
+
+	
 

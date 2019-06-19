@@ -12,7 +12,8 @@ body{
 
 }
 main{
-  margin-top: 300px;
+  margin-top: 200px ;
+
 }
 
 li{
@@ -363,9 +364,7 @@ footer{
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: 200px auto; }
+  justify-content: center;}
 
 .latest_title {
   font-size: 20px;
@@ -430,6 +429,7 @@ footer{
 
 .archive_block span{
   border:1px solid gray;
+  font-size:13px;
 }
 
 .archive_cat,
@@ -443,6 +443,9 @@ footer{
 .archive_cat{
   background-color: gray;
   color:white;
+  width: 200px;
+  font-size: 12px;
+  text-align: center;
 }
 
 /*/////singleのパンくずリスト///////////*/
@@ -530,7 +533,8 @@ font-size:15px;
 
 
 
-.row{
+.contact-
+row{
   justify-content: center;
   margin-top:30px;
 }
@@ -552,7 +556,7 @@ font-size:15px;
 /*////////////////////////////////////*/
 /*///////////  page-kaisha //////////*/
 /*////////////////////////////////////*/
-.container{
+.kaisha-container{
   margin:200px auto 200px auto;
 
 }
