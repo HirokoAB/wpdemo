@@ -1,4 +1,32 @@
 <?php get_header(); ?>
+
+
+
+
+    
+    <?php if(!is_404()): ?>
+
+    <?php
+// カスタムヘッダーが設定されていない?
+if ( empty( get_header_image() ) ) {
+?>
+  <?php get_template_part( 'single' , 'slider' ); ?>
+<?php
+} else {
+?>
+  <img src="<?php header_image(); ?>">
+<?php
+}
+
+
+
+    <div class="header-container">
+       <img src="<?php echo get_template_directory_uri(); ?>/img/maru.png" alt="" class="logo">
+      <?php get_template_part( 'single' , 'slider' ); ?>
+
+    </div> 
+    <?php endif; ?>
+
   
 
   <main class="articles">

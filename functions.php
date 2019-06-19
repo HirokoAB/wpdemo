@@ -67,7 +67,8 @@ function cptui_register_my_cpts_infomation() {
 	register_post_type( "infomation", $args );
 }
 
-function cptui_register_my_cpts_slider() {
+
+	function cptui_register_my_cpts_slider() {
 
 	/**
 	 * Post Type: スライダー画像の新規投稿.
@@ -76,7 +77,11 @@ function cptui_register_my_cpts_slider() {
 	$labels = array(
 		"name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
 		"singular_name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
-		"menu_name" => __( "スライダー画像変更", "custom-post-type-ui" ),
+		"menu_name" => __( "スライダーの","\n","画像変更", "custom-post-type-ui" ),
+		"all_items" => __( "スライダー一覧", "custom-post-type-ui" ),
+		"add_new_item" => __( "スライダー新規追加", "custom-post-type-ui" ),
+		"new_item" => __( "新規スライダー", "custom-post-type-ui" ),
+		"view_item" => __( "一覧を表示", "custom-post-type-ui" ),
 		"search_items" => __( "スライダー投稿画像の検索", "custom-post-type-ui" ),
 		"not_found" => __( "画像の投稿はまだありません", "custom-post-type-ui" ),
 		"not_found_in_trash" => __( "ゴミ箱内には何もありません", "custom-post-type-ui" ),
@@ -109,6 +114,7 @@ function cptui_register_my_cpts_slider() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_slider' );
+
 
 
 add_action( 'init', 'cptui_register_my_cpts_infomation' );
