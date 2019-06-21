@@ -2,3 +2,120 @@
           <?php if(function_exists( 'bcn_display' )) {
                 bcn_display();
           }?>
+
+
+  /*////////////////////////////////////*/
+/*///////以下singleのレスポンシブ///////*/
+/*////////////////////////////////////*/
+
+
+@media only screen and (max-width: 1199px) {
+  .article_container {
+    margin: 3% 20%; }
+  .article_archive {
+    width: 90%; } }
+
+@media only screen and (max-width: 991px) {
+  .article_container {
+    margin: 3% 5%; } }
+
+@media only screen and (max-width: 767px) {
+  .post-entry > p {
+    display: none; } }
+
+@media only screen and (max-width: 575px) {
+  .article_loop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .latest_title::before,
+  .latest_title::after {
+    width: 20%; }
+  .post-meta p {
+    margin-bottom: 0px; }
+  .nav-below .pre {
+    left: 10%; }
+  .nav-below .next {
+    right: 10%; }
+  .post-entry {
+    border-top: none;
+    padding-top: 0px;
+    margin-top: 10px; }
+  .post-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .post-more {
+    margin-top: -10px; }
+  .post-more:after {
+    content: "";
+    margin-bottom: 50px; } }
+
+/*レスポンシブ対応*/
+@media screen and (max-width:1118px){
+  .img-box li{
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .img-box li:nth-child(3),
+  .img-box li:last-child{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:767px){
+  .menu{
+    display: none;
+  }
+  
+  /*ヘッダー画像*/
+  header .logo{
+    position: static;
+    margin-top: 42px;
+    width: 220px;
+  }
+
+  .topImg-pc{
+    display: none;
+  }
+
+  .topImg-sp{
+    display: inline;
+    margin-top: 26px;
+    width: 100%;
+  }
+
+  .logoText-pc{
+    display: none;
+  }
+
+  .logoText-sp{
+    display: inline;
+    position: absolute;
+    top: 324px;
+    left: 40px;
+    width: 65%;
+  }
+}
+  /*ヘッダーテキスト*/
+  .header-text .pc{
+    display: none;
+  }
+
+  .header-text{
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-text .sp{
+    display: inline;
+    text-align: center;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+  }
