@@ -782,84 +782,71 @@ footer{
 /*///////////  archive.php  //////////*/
 /*////////////////////////////////////*/
 
-#blog_archive{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 1122px;
-  margin:auto;
-}
-
-
-#blog_archive .container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-#blog_archive .forfix{
-/*  width:1122px;*/
-  height: 259px;
+.article-container{
   display: flex;
   align-items: center;
-  margin-bottom: 3%;
+  margin:20px auto;
 }
 
-
-#blog_archive .forfix img{
-  width: 429px;
-  height: 259px;
-  margin-right: 2%;
+.post-thumbnail img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.post-detail{
+  width: 100%;
+  margin-left: 20px;
 }
 
-
-#blog_archive .article_fix{
-  width: 694px;
-
+.post-upper,
+.post-lower {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-#blog_archive .forfix h2{
-  font-size: 18px;
-  margin-bottom:12px;
+.post-upper >h2{
+  font-weight: bold;
 }
 
-
-#blog_archive .forfix h3,p{
-  font-size: 15px;
-}
-
-
-#blog_archive .article{
-  margin-bottom: 5px;
-  word-break: break-all;
-
-}
-
-#blog_archive .continue{
-  margin-top: 40px;
-}
-
-#blog_archive a{
-  text-decoration: none;
-  color:black;
-}
-
-
-#blog_archive button{
-  padding: 3px 40px;
-  border: solid 1px black;
-  background-color: white;
-  margin-top:90px;
+.post-more >a{
   font-size: 12px;
+  padding:5px;
+  border:solid 1px black;
 }
 
 
-#blog_archive .pre{
-  margin-right:30px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
