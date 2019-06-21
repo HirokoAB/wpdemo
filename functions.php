@@ -151,6 +151,30 @@ function cptui_register_my_taxes_info() {
 }
 add_action( 'init', 'cptui_register_my_taxes_info' );
 
+
+
+$parent_term_id = $parent_term[ '43' ]; // ターム ID（数値）を取得
+wp_insert_term(
+  '商品入荷のお知らせ', // ターム名
+  'お知らせ', // タクソノミー
+  array(
+    'description'=> 'Inform from Staff.',
+    'parent'=> $parent_term_id
+  )
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////////////////////////////////
 //////ウィジェットに追加に関するコード///////
 /////////////////////////////////////////
