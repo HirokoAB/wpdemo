@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div class="container-fluid">
+<div class="container-fluid single-container">
 
-  <div class="row">
+  <div class="row single-row">
     <div class="col-sm-2"></div>
-    <div class="col-sm-7">
+    <div class="col-sm-7 article-container">
       <?php if(have_posts()): the_post(); ?>
         <article>
           <div class="article">
@@ -39,16 +39,20 @@
           
 
           <div class="nav-below">
-              <span class="pre_text">
+              <span class="pre_text" >
                 <?php previous_post_link('%link','< 前へ'); ?>
               </span>
               <span class="next_text">  
                     <?php next_post_link('%link','次へ >'); ?>
               </span>
           </div>
-          <div class="related">
+          <div class="related relate-container">
                 <?php get_template_part('form', 'related');?>
-              </div>
+          </div>
+          <!-- コメント欄の表示 -->
+          <div class="coment-container">
+            <?php comments_template(); ?>
+          </div>
           <div class="article_archive">
             <p class="latest_title">お知らせ</p>
               <div class="article_loop">
