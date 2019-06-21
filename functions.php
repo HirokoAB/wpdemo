@@ -155,6 +155,28 @@ add_action( 'init', 'cptui_register_my_taxes_info' );
 //////ウィジェットに追加に関するコード///////
 /////////////////////////////////////////
 
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'サイドバー1',
+ 'id' => 'sidebar1',
+ "before_widget" => '<div class="%2$s">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
+
+
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'サイドバー2',
+ 'id' => 'sidebar2',
+ "before_widget" => '<div class="%2$s">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
 
 
 function twp_setup_theme(){
@@ -165,9 +187,9 @@ function twp_setup_theme(){
 add_action( 'after_setup_theme', 'twp_setup_theme' );
 
 
-/////////////////////////
-//////パンクスリスト///////
-/////////////////////////
+//////////////////////////////////////////
+/////////////パンくずリスト////////////////
+/////////////////////////////////////////
 function breadcrumb(){
     global $post;
     $str ='';
