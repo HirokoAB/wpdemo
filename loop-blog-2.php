@@ -1,4 +1,4 @@
-<?php query_posts("posts_per_page=2&paged+$paged"); ?>
+
 <!-- ここから記事取得のループ -->
 	<?php if ( have_posts() ) : ?>
     <?php while(have_posts()) : the_post(); ?>
@@ -37,7 +37,6 @@
 		          </div>
 		          </div>
 	        	</div>
-	        	
 
 
 	    </div>
@@ -45,6 +44,10 @@
 	    </div>
     
     <?php endwhile; ?>
+                  <?php the_posts_pagination( array(
+                    'mid_size' => 5,
+              ));  ?>
+ </div>
     <?php endif; ?>
 
 

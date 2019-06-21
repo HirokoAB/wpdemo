@@ -782,7 +782,7 @@ footer{
 /*///////////  archive.php  //////////*/
 /*////////////////////////////////////*/
 
-.article-container{
+.archive-container{
   display: flex;
   align-items: center;
   margin:20px auto;
@@ -798,11 +798,20 @@ footer{
   margin-left: 20px;
 }
 
-.post-upper,
-.post-lower {
+.post-upper{
   display: flex;
   justify-content: space-between;
 }
+
+.post-lower{
+  display: flex;
+  flex-direction:column;
+}
+
+.post-more{
+  text-align: right;
+}
+
 
 .post-upper >h2{
   font-weight: bold;
@@ -814,6 +823,9 @@ footer{
   border:solid 1px black;
 }
 
+.nav-links{
+  margin:auto;
+}
 
 
 

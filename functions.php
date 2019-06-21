@@ -291,8 +291,15 @@ function show_contact_form() {
 add_shortcode('slider', 'show_contact_form');
 
 
+//////////////////////////////////////////
+////////////  archiveの文字数 /////////////
+/////////////////////////////////////////
 
 
+function cus_excerpt_length($length){
+	return 80;
+}
+add_filter(' excerpt_length ' , 'cus_excerpt_length' );
 
 
 

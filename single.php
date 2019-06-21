@@ -20,7 +20,6 @@
                           <h1><?php the_title(); ?></h1> 
                           <!--投稿日を取得-->
                            <span class="article_date">
-                            <i class="fas fa-pencil-alt"></i>
                             <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
                               <?php echo get_the_date(); ?>
                             </time>
@@ -28,7 +27,7 @@
                         </div> 
                         <!--本文取得-->
                         <div class="article_content">
-                          <?php the_content(); ?>
+                          <?php the_content('Read more...'); ?>
                         </div>
 
                       <?php else: ?>
@@ -72,7 +71,6 @@
       </div>
 </div>
 </article>
-
 
 
 
