@@ -13,7 +13,7 @@
 
 
 <div class="info-container">
-    <p class="info_title"><?php echo single_term_title(); ?></p>
+    <p class="info_title">お知らせ一覧</p>
   <div class="info_loop">        
 <!-- postsの中に表示件数で指定した数の投稿を代入 --> 　　
   <?php $posts = get_posts($args);?>
