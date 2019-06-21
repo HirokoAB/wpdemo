@@ -1,33 +1,45 @@
 
 <!-- 表示件数を指定するための配列 -->
       <?php $args =  array( 
-      	'posts_per_page' => 3,
-      	'post_type' => 'infomation' );?>
+      	'posts_per_page' => 6);?>
 
 <!-- postsの中に表示件数で指定した数の投稿を代入 --> 　　
       <?php $posts = get_posts($args);?>
 	
 <!-- ここから記事取得のループ -->
-	<?php if( have_posts('')): ?>
-		<?php foreach ( $posts as $post ):?> 
-			<div class="archive_block">
-					<span class="archive_cat">
-						<?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
-					</span>		
-
-					<span class="archive_date">
-						<time><?php echo get_the_date( 'Y/m/d' ); ?></time>
-					</span>
-
-					<?php the_title( '<h1><a href="'.esc_url( get_permalink() ).'">','</a><h1>' ); ?>
-					</div>
-				<?php endforeach; ?>
-		
-			<?php else: ?>
-			
-			<p>まだ投稿はありません</p>
-		
-		<?php endif; ?>
-
+	<?php if ( have_posts() ) : ?>
+    <?php while(have_posts()) : the_post(); ?>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="post mb-20">
+            <div class="post-thumbnail">
+                <a href="<?php the_permalink() ?>">
+                <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail('medium'); ?>
+                <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dori-.jpg" alt="">
+                <?php endif; ?>
+                </a>
+            </div>
+            <div class="post-header font-alt">
+                <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                <div class="post-meta">
+                <p>
+                    <?php the_time("Y/m/d"); ?>
+                </p>
+                </div>
+            </div>
+            <div class="post-entry">
+                <p>
+                <?php the_excerpt() ?>
+                </p>
+            </div>
+            <div class="post-more">
+                <a class="more-link" href="<?php the_permalink() ?>">続きを読む
+                </a>
+            </div>
+            </div>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 
