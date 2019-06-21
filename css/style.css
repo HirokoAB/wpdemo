@@ -577,7 +577,10 @@ a{
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
 
+.form-container{
+  align-items:center;
 
+}
 .contact-title{
 text-align: center;
 color: gray;
@@ -596,10 +599,10 @@ font-size:15px;
   margin-top:30px;
 }
 
-.contactform{
+.contact-form{
 
-  margin-top:100px;
-  margin-bottom: 300px;
+  margin:50px auto 300px auto;
+
 }
 
 
