@@ -14,11 +14,8 @@
               <div class="article_loop">
                 <?php get_template_part('loop', 'blog');?>
               </div>
-              <?php 
-  the_posts_pagination( array( 
-    'mid_size' => 5,
-  ) ); 
-?>
+
+              <?php the_posts_pagination(); ?>
  </div>
 
 </main>

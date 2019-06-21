@@ -304,9 +304,23 @@ add_filter(' excerpt_length ' , 'cus_excerpt_length' );
 
 
 
+//////////////////////////////////////////
+//////////// paged動作のための記述 /////////////
+/////////////////////////////////////////
 
+function my_post_queries( $query ) {
+  // 管理画面のクエリを変更せず、さらにメインクエリだけにする
+  if ( ! is_admin() && $query->is_main_query() ) {
 
+    // ホームとカテゴリーページのクエリを変更
 
+    if ( is_archive() ) {
+      $query->set( 'posts_per_page', 2 );
+    }
+
+  }
+}
+add_action( 'pre_get_posts', 'my_post_queries' );
 
 
 
