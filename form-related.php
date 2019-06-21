@@ -1,1 +1,1 @@
-<!-- <?php wp_related_posts();?> -->
+<?php wp_related_posts();?> 
