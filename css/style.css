@@ -360,22 +360,6 @@ a{
   text-align: left;
   padding: 10px;  }
 
-
-/*.latest_title::before {
-  margin-right: 20px; }
-
-.latest_title::after {
-  margin-left: 20px; }
-
-.latest_title::before,
-.latest_title::after {
-  content: "";
-  display: inline-block;
-  width: 40%;
-  height: 1px;
-  background-color: gray;
-  vertical-align: middle; }*/
-
 .article_loop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,6 +726,7 @@ ul.related_post li img {
 }
 
 
+
 /*////////////////////////////////////*/
 /*///////////  page 404     //////////*/
 /*////////////////////////////////////*/
@@ -762,7 +747,7 @@ ul.related_post li img {
 }
 
 /*////////////////////////////////////*/
-/*///////////  archive.php  //////////*/
+/*///////////  footer.php  //////////*/
 /*////////////////////////////////////*/
 
 
@@ -770,8 +755,10 @@ ul.related_post li img {
 footer{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #000;
-  color: #fff;
+  color: white;
   margin-top: 63px;
 }
 
@@ -779,6 +766,79 @@ footer{
   font-size: 16px;
   padding: 56px 0;
 }
+
+.ft-container1{
+  padding:20px;
+}
+
+
+.footer-container::after{
+ content: "";
+ height:1px;
+ background-color: white;
+ width: 100%;
+}
+
+.sponsor-container{
+  display: flex;
+  justify-content:space-between;
+}
+
+.sponsor-container li {
+  margin-right:10px;
+}
+
+.sponsor-container li:last-child{
+  margin-right: 0px;
+}
+
+.sponsor-container li img{
+  width: 200px;
+}
+
+
+#menu-menu3{
+  justify-content: space-between;
+  margin-right:0px;
+  height: 70px;
+}
+#menu-menu3 li:first-child{
+  margin-left:0px;
+}
+
+#menu-menu3 a {
+  color: white;
+}
+
+.footer-corp{
+  display: flex;
+  flex-direction:column;
+  margin:34px auto;
+
+}
+.corp-list{
+  text-align: left;
+}
+.footer-corp h2{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+
+.footer-corp li >span{
+  margin-right:10px;
+  width: 30px;
+  letter-spacing: 5px;
+
+}
+
+.footer-corp li:nth-child(1)>span,
+.footer-corp li:nth-child(3)>span{
+  letter-spacing: 3px;
+}
+
 
 
 /*////////////////////////////////////*/
@@ -829,11 +889,6 @@ footer{
 .nav-links{
   margin:auto;
 }
-
-
-
-
-
 
 
 
