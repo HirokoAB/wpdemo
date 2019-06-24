@@ -1,4 +1,45 @@
  <footer>
+
+ 	<div class="footer-container container">
+ 		<div class="row">
+ 		<div class="col-8 ft-container1">	
+		<div id="footer-menu">
+			<?php wp_nav_menu( array( 
+				'theme_location'  => 'footer-menu',
+				' container_id ' => ' menu3-container ',
+				'  menu_id' => ' 3 ',
+				' menu_class ' => ' menu33333 '
+		)); ?>
+		</div>
+		
+		<ul class="sponsor-container">
+		<?php dynamic_sidebar('フッターバ-1'); ?>
+		</ul>
+
+		</div>
+		
+		<div class="col-4">
+			<div class="footer-corp">
+			<h2 class="footer-text">サンプル株式会社</h2>
+			<ul class="corp-list">
+				<li><span>住</span>所：◯◯◯◯◯◯◯◯1-2-3</li>
+				<li><span>E-mail:</span>sample@sent.com</li>
+				<li><span>電</span>話：123-456-789</li>
+				<li><span>営業時間：</span>00:00 〜　00:00</li>
+			</ul>
+			</div>
+		</div>
+		
+
+
+
+
+
+		</div>
+    </div>
+
+
+
     </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
