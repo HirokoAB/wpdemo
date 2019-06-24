@@ -202,6 +202,17 @@ if (function_exists('register_sidebar')) {
  ));
 }
 
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'フッターバー1',
+ 'id' => 'sidebar2',
+ "before_widget" => '<div class="%2$s">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
+
 
 function twp_setup_theme(){
 	//サムネイル画像を表示させるPHP
