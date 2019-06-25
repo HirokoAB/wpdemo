@@ -19,6 +19,41 @@
 
 add_theme_support( 'custom-header', $defaults );
 
+//////////////////////////////////////////
+//////画像を任意の大きさで切り取る設定//////
+/////////////////////////////////////////
+
+function add_custom_image_sizes() {
+    global $my_custom_image_sizes;
+    $my_custom_image_sizes = array(
+        'original_thumb_crop' => array(
+            'name'       => 'footer切り抜き', // 選択肢のラベル名
+            'width'      => 300,    // 最大画像幅をpxで設定
+            'height'     => 100,    // 最大画像高さをpxで設定	
+            'crop'       => true,  // 切り抜きを行うならtrue, 行わないならfalse
+            'selectable' => true   // 選択肢に含めるならtrue, 含めないならfalse
+        )
+    );
+    foreach ( $my_custom_image_sizes as $slug => $size ) {
+        add_image_size( $slug, $size['width'], $size['height'], $size['crop'] );
+    }
+}
+add_action( 'after_setup_theme', 'add_custom_image_sizes' );
+
+function add_custom_image_size_select( $size_names ) {
+    global $my_custom_image_sizes;
+    $custom_sizes = get_intermediate_image_sizes();
+    foreach ( $custom_sizes as $custom_size ) {
+        if ( isset( $my_custom_image_sizes[$custom_size]['selectable'] ) && $my_custom_image_sizes[$custom_size]['selectable'] ) {
+            $size_names[$custom_size] = $my_custom_image_sizes[$custom_size]['name'];
+        }
+    }
+    return $size_names;
+}
+add_filter( 'image_size_names_choose', 'add_custom_image_size_select' );
+
+
+
 
 //////////////////////////////////////////
 //////カスタム投稿タイプのUIに関する記述//////
@@ -164,9 +199,11 @@ wp_insert_term(
 );
 
 
+////////////////////////////////////////
+//////footer menu追加に関するコード///////
+////////////////////////////////////////
 
-
-
+register_nav_menu( 'footer-menu' , 'フッターメニュー' );
 
 
 
@@ -204,15 +241,14 @@ if (function_exists('register_sidebar')) {
 
 if (function_exists('register_sidebar')) {
  register_sidebar(array(
- 'name' => 'フッターバー1',
- 'id' => 'sidebar2',
- "before_widget" => '<div class="%2$s">',
- 'after_widget' => '</div>',
+ 'name' => 'フッターバ-1',
+ 'id' => 'footer1',
+ "before_widget" => '<li class="%2$s">',
+ 'after_widget' => '</li>',
  'before_title' => '<h3 class="widgettitle">',
  'after_title' => '</h3>'
  ));
 }
-
 
 function twp_setup_theme(){
 	//サムネイル画像を表示させるPHP
@@ -312,16 +348,20 @@ function cus_excerpt_length($length){
 }
 add_filter(' excerpt_length ' , 'cus_excerpt_length' );
 
-
-
-
 //////////////////////////////////////////
-//////////// paged動作のための記述 /////////////
+//////////Thakyou pageのfunction/////////
 /////////////////////////////////////////
-
-function my_post_queries( $query ) {
-  // 管理画面のクエリを変更せず、さらにメインクエリだけにする
-  if ( ! is_admin() && $query->is_main_query() ) {
+function custom_footer() {
+?>
+	<script>
+	document.addEventListener( 'wpcf7mailsent', function( event ) {
+		location = 'http://localhost/wordpress_sample/thankyou';
+	}, false );
+	</script>
+<?php
+}
+ 
+add_action( 'wp_footer', 'custom_footer' );
 
     // ホームとカテゴリーページのクエリを変更
 

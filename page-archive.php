@@ -15,12 +15,10 @@
                 <?php get_template_part('loop', 'blog');?>
               </div>
 
-
               <?php $pagination = get_the_posts_pagination(); ?>
               <?php var_dump($pagination); ?>
               <?php the_posts_pagination(); ?>
  </div>
- 
 
 </main>
 
