@@ -15,7 +15,7 @@ body{
 
 }
 main{
-  margin-top: 200px ;
+  margin-top: 150px ;
 
 }
 
@@ -28,7 +28,34 @@ a{
   color: #000;
 }
 
-/*ヘッダーメニュー*/
+/*////////////////////////////////////*/
+/*///////////  page.nav  /////////////*/
+/*////////////////////////////////////*/
+
+.page-numbers{
+  padding:2px 6.5px;
+  border:1px solid black;
+  border-radius: 50%;
+}
+
+.dots{
+  border:none;
+}
+
+.next,
+.prev{
+  font-size: 13px;
+  border:none;
+}
+
+.next a{
+  border:none;
+}
+
+
+/*/////////////////////////////////////*/
+/*///////////  header.menu ////////////*/
+/*////////////////////////////////////*/
 .head-container{
   display: flex;
   justify-content: space-between;
@@ -40,7 +67,7 @@ a{
 .head-container > img{
   height: 50px;
   margin-left: 60px;
-
+  margin-top:30px;
 }
 
 .menu{
@@ -52,7 +79,7 @@ a{
 }
 
 .menu li{
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 24px;
   font-size: 15px;
   font-family: "游ゴシック体", YuGothic;
@@ -135,7 +162,7 @@ a{
   justify-content: flex-end;
 }
 
-.next {
+.next_readme {
   display: inline-block;
   padding-bottom: 4px;
   position: relative;
@@ -448,7 +475,7 @@ a{
 
   .comment-body p::before{
     content:" コメント内容： ";
-/*    font-size: 13pt;*/
+
   }
 
   .reply{
@@ -568,6 +595,7 @@ a{
 .contact-title{
 text-align: center;
 color: gray;
+margin-top:100px;
 
 }
 .contact-title >h1 {
@@ -609,7 +637,7 @@ width: 80%;
 margin: auto;
 }
 
-h1{
+.kaisha-title{
   text-align: center;
   margin-bottom: 30px;
   font-size: 20px;
@@ -892,31 +920,128 @@ footer{
 
 
 
+/*////////////////////////////////////*/
+/*//////  archive-staff.php  //////////*/
+/*////////////////////////////////////*/
+.staff-container{
+  margin-bottom: 50px;
+}
+.staff-info{
+   display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.staff-img{
+  margin-bottom: 10px;
+}
+.staff-img img{
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+
+}
 
 
+.staff-name{
+  font-size: 15px;
+  margin-bottom:3px;
+
+}
+
+.staff-job{
+  margin-bottom:10px;
+  font-size: 12px;
+}
+
+.staff-more{
+  text-align: right;
+  font-size:10px;
+}
+
+/*.staff-more::after {
+
+  margin-top: 10px;
+  background-color: #E7EAEB;
+  bottom: -10px;
+  content: '';
+  display: block;
+  height: 5px;
+  right: 2px;
+  position: absolute;
+  transition: .5s all;
+  width: 21%;
+}
+*/
+/*.staff-more:hover::after {
+  width: 30%;
+}
+
+.staff-more a{*/
+  /*border:1px solid black;*/
+/*  background-color: #F0F0F0;
+}
+*/
 
 
+/*////////////////////////////////////*/
+/*/////// single-staff.php  //////////*/
+/*////////////////////////////////////*/
+.single-staff{
+ margin:auto;
+ display: flex;
+ align-items:center;
+ justify-content: center;
 
 
+}
+.single-staff h1,
+.single-staff h2,
+.single-staff div {
+ margin-bottom: 10px;
+
+}
+.staff-imges img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  
+}
+
+.staff-name-s{
+  font-size:20px;
+}
 
 
+.staff-detail-contaner{
+  margin-left:20px;
+  width: 350px;
+}
 
 
+.nav-below-staff {
+  font-size: 12px;
+  position: relative;
+  width: 100%;
+  margin-top: 5%; 
+  text-align:center;
+}
 
 
+/*.pre_text {
+  position: absolute;
+  left: 50%; }
 
+.next_text {
+  position: absolute;
+  right: 50%; }*/
 
+.staff-archive-btn{
+    margin-top: 200px;
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

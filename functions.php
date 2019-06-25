@@ -249,6 +249,7 @@ if (function_exists('register_sidebar')) {
  'after_title' => '</h3>'
  ));
 }
+
 function twp_setup_theme(){
 	//サムネイル画像を表示させるPHP
 	add_theme_support( 'post-thumbnails' );
@@ -350,7 +351,6 @@ add_filter(' excerpt_length ' , 'cus_excerpt_length' );
 //////////////////////////////////////////
 //////////Thakyou pageのfunction/////////
 /////////////////////////////////////////
-
 function custom_footer() {
 ?>
 	<script>
@@ -363,7 +363,15 @@ function custom_footer() {
  
 add_action( 'wp_footer', 'custom_footer' );
 
+    // ホームとカテゴリーページのクエリを変更
 
+    if ( is_archive() ) {
+      $query->set( 'posts_per_page', 2 );
+    }
+
+  }
+}
+add_action( 'pre_get_posts', 'my_post_queries' );
 
 
 
