@@ -18,7 +18,6 @@
 	<?php $loop = new WP_Query($args);
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
->>>>>>> Stashed changes
     	<div class="container">
     	<div class= "row">
         <div class="col-8 archive-container">

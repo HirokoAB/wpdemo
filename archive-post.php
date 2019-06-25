@@ -69,14 +69,16 @@
     
     <?php endwhile; ?>
     <?php endif; ?>
-    <?php $big = 9999999999;
+    <?php 
+      global $wp_query;
+    $big = 9999999999;
 
           echo paginate_links(array(
             'base' => str_replace( $big,'%#%',esc_url(get_pagenum_link( $big ))),
             'foramt' => ' ?paged=%#% ',
             'current' => max( 1, get_query_var( 'paged' )),
             'total' => $the_query ->max_num_pages,
-            ' show_all ' => true,
+
       ));
       ?>
 
