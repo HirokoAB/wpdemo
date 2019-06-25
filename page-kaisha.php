@@ -1,7 +1,7 @@
  
 <?php get_header(); ?>
 
-
+<main>
 <div class="container">
 	<div class="breadcrumbs">
      <?php breadcrumb(); ?>
@@ -44,3 +44,5 @@
 </div>
 
 </div>
+
+</main>
