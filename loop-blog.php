@@ -1,14 +1,24 @@
-<!-- <?php query_posts("posts_per_page=2&paged+$paged"); ?> -->
-<!-- <?php
-query_posts($query_string . "&orderby=title&posts_per_page=3"); ?> -->
-<?php $args = array('post_type'=>'post');
-$q = new WP_Query( $args );
- ?>
 
+<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+
+
+<?php 
+	$args  = array(
+		"paged" => $paged,
+		"post_type" => "post",
+		"posts_per_page" => 2,
+		 "post_status" => "publish"
+	)
+
+	?>
+	<?php var_dump($args);  ?>
 
 <!-- ここから記事取得のループ -->
-	<?php if ( $q->have_posts() ) : ?>
-    <?php while($q->have_posts()) : $q->the_post(); ?>
+
+	<?php $loop = new WP_Query($args);
+	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
+
+>>>>>>> Stashed changes
     	<div class="container">
     	<div class= "row">
         <div class="col-8 archive-container">
@@ -53,6 +63,12 @@ $q = new WP_Query( $args );
     
     <?php endwhile; ?>
     <?php endif; ?>
+    <?php  if(function_exists ( 'wp_pagenavi' )){
+    	wp_pagenavi(array( 'query' => $loop ));
+    }?>
+
+                  <?php the_posts_pagination(); ?>
+                  <?php var_dump($args);  ?>
 
 
 
