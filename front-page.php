@@ -7,7 +7,9 @@
  <?php if ( empty( get_header_image() ) ) :?> 
     <?php get_template_part( 'single' , 'slider' ); ?>
   <?php else :?>
+    <div class=header-img>
     <img src="<?php header_image(); ?>">
+    </div>
   <?endif;?>
 
 

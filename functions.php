@@ -4,8 +4,8 @@
 	$defaults = array(
 	'default-image'         => get_template_directory_uri() . '/img/visual_2_pc.png', //デフォルト画像
 	'random-default'         => false, //ランダム表示
-	'width'                  => '1027', //幅
-	'height'                 => '448', //高さ
+	'width'                  => 1165, //幅
+	'height'                 => 400, //高さ
 	'flex-height'            => false, //フレキシブル対応（高さ）
 	'flex-width'             => false, //フレキシブル対応（幅）
 	'default-text-color'     => '', //デフォルトのテキストの色

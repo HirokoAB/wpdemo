@@ -11,14 +11,13 @@
 	)
 
 	?>
-	<?php var_dump($args);  ?>
+
 
 <!-- ここから記事取得のループ -->
 
 	<?php $loop = new WP_Query($args);
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
->>>>>>> Stashed changes
     	<div class="container">
     	<div class= "row">
         <div class="col-8 archive-container">
@@ -67,8 +66,10 @@
     	wp_pagenavi(array( 'query' => $loop ));
     }?>
 
-                  <?php the_posts_pagination(); ?>
-                  <?php var_dump($args);  ?>
+                <!--   <?php the_posts_pagination(); ?> -->
+                  <?php echo get_the_post_navigation( array( 'prev_text' => '前へ', 'next_text' => '次へ' ) ); ?>
+
+
 
 
 
