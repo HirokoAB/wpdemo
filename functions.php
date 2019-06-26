@@ -360,18 +360,7 @@ function custom_footer() {
 	</script>
 <?php
 }
- 
 add_action( 'wp_footer', 'custom_footer' );
-
-    // ホームとカテゴリーページのクエリを変更
-
-    if ( is_archive() ) {
-      $query->set( 'posts_per_page', 2 );
-    }
-
-  }
-}
-add_action( 'pre_get_posts', 'my_post_queries' );
 
 
 
