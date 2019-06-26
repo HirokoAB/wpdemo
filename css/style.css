@@ -15,7 +15,7 @@ body{
 
 }
 main{
-  margin-top: 150px ;
+  margin-top: 120px ;
 
 }
 
@@ -61,7 +61,8 @@ a{
   justify-content: space-between;
   align-items: center;
   margin:auto;
-  background-color: pink;
+  border-bottom: 3px solid #f0f0f0;
+  background-color:white;
 }
 
 .head-container > img{
@@ -85,9 +86,22 @@ a{
   font-family: "游ゴシック体", YuGothic;
 }
 
+/*/////////////////////////////////////*/
+/*///////////  header.img ////////////*/
+/*////////////////////////////////////*/
 
+.header-img{
+  margin-bottom:32px;
+}
+.header-img> img{
+  display: block;
+  margin:auto;
+  width: 1165px;
+  height: 400px;
+  object-fit: cover;
+  
 
-
+}
 /*記事一覧*/
 
 .articles{
@@ -157,7 +171,7 @@ a{
 }
 
 /*READ ME ホバー部分*/
-.read{
+/*.read{
   display: flex;
   justify-content: flex-end;
 }
@@ -188,7 +202,7 @@ a{
 .next:hover::after {
   width: 96%;
 }
-
+*/
 
   
 /*/////////widjet////////////*/
@@ -198,7 +212,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto; 
+  margin: 127px auto 0px auto; 
 }
 
 .calendar_wrap{
@@ -246,7 +260,7 @@ a{
   width: 80%;
 　font-size: 18px;
   font-weight:200;
-  margin: 50px auto;
+  margin: 20px auto;
 　border: solid 1px black;
 
 }
@@ -300,6 +314,12 @@ a{
 
 
 /*//////////以下single.php//////////*/
+.latest_title{
+  width: 40%;
+  margin:auto;
+}
+
+
 .single-container{
   margin-top: 300px;
 }
@@ -787,7 +807,7 @@ footer{
   align-items: center;
   background-color: #000;
   color: white;
-  margin-top: 63px;
+  margin-top: 120px;
 }
 
 .contact{

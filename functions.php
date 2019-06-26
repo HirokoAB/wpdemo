@@ -186,6 +186,9 @@ function cptui_register_my_taxes_info() {
 }
 add_action( 'init', 'cptui_register_my_taxes_info' );
 
+//infoとinfomationを紐付けします
+register_taxonomy_for_object_type( 'info' , 'infomation' ); 
+
 
 
 $parent_term_id = $parent_term[ '43' ]; // ターム ID（数値）を取得
