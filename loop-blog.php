@@ -11,7 +11,7 @@
 	)
 
 	?>
-	<?php var_dump($args);  ?>
+
 
 <!-- ここから記事取得のループ -->
 
@@ -66,8 +66,10 @@
     	wp_pagenavi(array( 'query' => $loop ));
     }?>
 
-                  <?php the_posts_pagination(); ?>
-                  <?php var_dump($args);  ?>
+                <!--   <?php the_posts_pagination(); ?> -->
+                  <?php echo get_the_post_navigation( array( 'prev_text' => '前へ', 'next_text' => '次へ' ) ); ?>
+
+
 
 
 

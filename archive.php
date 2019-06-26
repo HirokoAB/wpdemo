@@ -5,20 +5,19 @@
 <main>
 
 <div class="article_archive">
-            <p class="latest_title"></p>
+            <p class="latest_title">ブログ記事一覧</p>
            <p><?php echo single_term_title(); ?></p>
               <div class="article_loop">
-                <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+           <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
 <?php 
   $args  = array(
     "paged" => $paged,
     "post_type" => "post",
-    "posts_per_page" => 2,
+    "posts_per_page" => 4,
      "post_status" => "publish"
   )
 
   ?>
-  <?php var_dump($args);  ?>
 
 <!-- ここから記事取得のループ -->
 
@@ -69,9 +68,8 @@
     
     <?php endwhile; ?>
     <?php endif; ?>
-    <?php $big = 9999999999;
 
-          echo paginate_links(array(
+    <?php echo paginate_links(array(
             'base' => str_replace( $big,'%#%',esc_url(get_pagenum_link( $big ))),
             'foramt' => ' ?paged=%#% ',
             'current' => max( 1, get_query_var( 'paged' )),
@@ -80,11 +78,24 @@
       ));
       ?>
 
-      <p>jjajj
-      </p>
- </div>
- 
+              <?php $pagination = get_the_posts_pagination(); ?>
+              <?php var_dump($pagination); ?>
+              <?php the_posts_pagination(); ?>
 
+          <?php echo paginate_links(array(
+            'base' => str_replace( $big,'%#%',esc_url(get_pagenum_link( $big ))),
+            'foramt' => ' ?paged=%#% ',
+            'current' => max( 1, get_query_var( 'paged' )),
+            'total' => $the_query ->max_num_pages,
+            ' show_all ' => true,
+      ));
+      ?>
+      <?php the_posts_pagination(); ?>
+<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(array('query'=>$myposts)); } ?>
+ </div>
+           <div class="list-btn">
+            <a href="<?php echo home_url(); ?>">TOPへ</a>
+          </div>
 </main>
 
 
