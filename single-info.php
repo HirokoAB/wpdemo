@@ -21,6 +21,8 @@
                           <?php $cate = get_the_category(); 
                                 echo $cate[0] -> cat_name;
                           ?>
+
+                          mamammamamama
                           <!--投稿日を取得-->
                            <span class="article_date">
                             <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
@@ -59,7 +61,7 @@
             <p class="latest_title">お知らせ</p>
               <div class="article_loop">
                 <?php query_posts("posts_per_page=3&paged+$paged"); ?>
-                <?php get_template_part('loop', 'blog');?>
+                <!-- <?php get_template_part('loop', 'blog');?> -->
               </div>
           
           <div class="list-btn">

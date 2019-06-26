@@ -26,7 +26,7 @@
 
       <div class="container">
       <div class= "row">
-        <div class="col-8 archive-container">
+      <div class="col-8 archive-container">
           <div class="post-thumbnail">
               <a href="<?php the_permalink() ?>">
               <?php if (has_post_thumbnail()): ?>
@@ -59,8 +59,6 @@
               </div>
               </div>
             </div>
-            
-
 
       </div>
       </div>
@@ -75,24 +73,12 @@
             'current' => max( 1, get_query_var( 'paged' )),
             'total' => $the_query ->max_num_pages,
             ' show_all ' => true,
-      ));
-      ?>
+              ));
+              ?>
 
               <?php $pagination = get_the_posts_pagination(); ?>
-              <?php var_dump($pagination); ?>
               <?php the_posts_pagination(); ?>
-
-          <?php echo paginate_links(array(
-            'base' => str_replace( $big,'%#%',esc_url(get_pagenum_link( $big ))),
-            'foramt' => ' ?paged=%#% ',
-            'current' => max( 1, get_query_var( 'paged' )),
-            'total' => $the_query ->max_num_pages,
-            ' show_all ' => true,
-      ));
-      ?>
-      <?php the_posts_pagination(); ?>
-<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(array('query'=>$myposts)); } ?>
- </div>
+  </div>
            <div class="list-btn">
             <a href="<?php echo home_url(); ?>">TOPへ</a>
           </div>

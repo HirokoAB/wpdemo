@@ -16,7 +16,7 @@
   <div class="container">
     <div class="row">
       <div class="col-9">
-        <?php get_template_part('taxonomy' , 'info' ); ?>
+        <?php get_template_part('archive' , 'info' ); ?>
       </div>
       <div class="col-3">
         <?php dynamic_sidebar('サイドバー2'); ?>
