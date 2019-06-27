@@ -13,13 +13,3 @@ var_dump( $corp );
 <br>
 <?php $test3 = get_post_meta( 387,"appeal1",true); ?>
 <?php var_dump ( $test3 ); ?>
-
-
-
-
-
-
- 
-
-
-<p>ははははああああああ</p>
