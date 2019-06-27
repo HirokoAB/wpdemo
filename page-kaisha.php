@@ -1,7 +1,7 @@
  
 <?php get_header(); ?>
 
-
+<main>
 <div class="container">
 	<div class="breadcrumbs">
      <?php breadcrumb(); ?>
@@ -9,7 +9,7 @@
 <div class="row kaihsa-img">	
 <img src="<?php echo get_template_directory_uri(); ?>/img/kaisha.jpg" alt="">
 </div>
-<h1>会社概要</h1>
+<h1 class="kaisha-title">会社概要</h1>
 
 <table class="kaisha">
 <th>会社名</th>
@@ -44,3 +44,5 @@
 </div>
 
 </div>
+
+</main>
