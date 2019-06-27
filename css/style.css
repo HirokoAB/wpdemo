@@ -318,10 +318,6 @@ a{
 
 
 /*//////////以下single.php//////////*/
-.latest_title{
-  width: 40%;
-  margin:auto;
-}
 
 
 .single-container{
@@ -403,7 +399,10 @@ a{
   margin-bottom: 100px;
 }
 
-.latest_title {
+
+.latest_title{
+  width: 760px;
+  margin:auto;
   font-size: 20px;
   text-align: center;
   margin-top: 100px;
