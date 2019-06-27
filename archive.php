@@ -54,7 +54,7 @@
                 </div>
                 <br>
                 <div class="post-more">
-                  <a class="more-link" href="<?php the_permalink() ?>">続きを読む
+                  <a class="more-link" href="<?php the_permalink() ?>">続きはこちら
                   </a>
               </div>
               </div>
