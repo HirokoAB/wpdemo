@@ -94,13 +94,14 @@ function cptui_register_my_cpts_infomation() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => true,
-		"rewrite" => array( "slug" => "info", "with_front" => true ),
+		"rewrite" => array( "slug" => "infomation", "with_front" => true ),
 		"query_var" => true,
 		"supports" => array( "title", "editor", "thumbnail" ),
 	);
 
 	register_post_type( "infomation", $args );
 }
+ add_action( 'init', 'cptui_register_my_cpts_infomation' );
 
 
 	function cptui_register_my_cpts_slider() {
@@ -151,8 +152,6 @@ function cptui_register_my_cpts_infomation() {
 add_action( 'init', 'cptui_register_my_cpts_slider' );
 
 
-
-add_action( 'init', 'cptui_register_my_cpts_infomation' );
 function cptui_register_my_taxes_info() {
 
 	/**
@@ -186,8 +185,6 @@ function cptui_register_my_taxes_info() {
 }
 add_action( 'init', 'cptui_register_my_taxes_info' );
 
-//infoとinfomationを紐付けします
-register_taxonomy_for_object_type( 'info' , 'infomation' ); 
 
 
 

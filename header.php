@@ -18,14 +18,17 @@
 
 <body>
 
-
   <header id=fixed>
       <div class="head-container">
+        <div class="head-contents">
 
-      <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
+          <div class="head-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
+          </div>
 
-      <div class="nav">
-      <?php wp_nav_menu(); ?> 
+          <div class="nav">
+          <?php wp_nav_menu(); ?> 
+          </div>
      </div>
-     </div>
+    </div>
   </header>

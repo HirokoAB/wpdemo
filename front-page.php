@@ -16,32 +16,14 @@
   <div class="container">
     <div class="row">
       <div class="col-9">
-        <?php get_template_part('archive' , 'info' ); ?>
+        <?php get_template_part( 'taxonomy' , 'info' ); ?>
       </div>
       <div class="col-3">
         <?php dynamic_sidebar('サイドバー2'); ?>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</main>
 
 
 <?php get_footer(); ?>
