@@ -324,6 +324,7 @@ a{
 }
 
 
+
 .single-container{
   margin-top: 300px;
 }
@@ -403,7 +404,10 @@ a{
   margin-bottom: 100px;
 }
 
-.latest_title {
+
+.latest_title{
+  width: 760px;
+  margin:auto;
   font-size: 20px;
   text-align: center;
   margin-top: 100px;
