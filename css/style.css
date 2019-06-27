@@ -18,7 +18,7 @@ header{
 }
 
 main{
-  padding-top: 150px ;
+  padding-top: 70px ;
   padding-bottom: 150px;
 }
 
@@ -69,18 +69,22 @@ a{
   align-items: flex-end;
   margin:auto;
   width: 1165px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
+.head-img{
+  padding-top: 35px;
+}
 .head-img > img{
   height: 50px;
 }
 
 .menu{
-  height: 140px;
+  height: 70px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-bottom:10px;
 }
 
 .menu li{
