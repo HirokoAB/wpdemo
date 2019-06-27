@@ -82,6 +82,19 @@
            <div class="list-btn">
             <a href="<?php echo home_url(); ?>">TOPへ</a>
           </div>
+
+
+<?php get_template_part( 'loop' , 'blog' ) ?>
+
+
+
+
+
+
+
+
+
+
 </main>
 
 

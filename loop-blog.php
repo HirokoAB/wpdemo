@@ -64,14 +64,8 @@
     <?php endif; ?>
     <?php  if(function_exists ( 'wp_pagenavi' )){
     	wp_pagenavi(array( 'query' => $loop ));
-    }?>
-
-                <!--   <?php the_posts_pagination(); ?> -->
-                  <?php echo get_the_post_navigation( array( 'prev_text' => '前へ', 'next_text' => '次へ' ) ); ?>
-
-
-
-
+    }?>	
+		<?php the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
 
 	
 
