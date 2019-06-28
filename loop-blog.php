@@ -1,22 +1,15 @@
 
-<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
-<?php var_dump($paged); ?>
-
-
-<?php 
-	$args  = array(
-		"paged" => $paged,
-		"post_type" => "post",
-		"posts_per_page" => 2,
-		 "post_status" => "publish"
-	)
-
-	?>
+	<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+	<?php $loop  = new WP_Query(array(
+    "paged" => $paged,
+    "posts_per_page" => 2,
+    "post_status" => "publish"
+  	));?>
 
 
 <!-- ここから記事取得のループ -->
 
-	<?php $loop = new WP_Query($args);
+	<?php 
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
     	<div class="container">
@@ -62,21 +55,12 @@
 	    </div>
     
     <?php endwhile; ?>
-    	<?php //the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
     <?php endif; ?>
 
 
 
 
-
-	   <?php $pagination = get_the_posts_pagination(); ?>
-       <?php  
-      if (is_null($pagination)){
-        echo 'null';
-      }else{
-        echo(var_dump ($pagination)).'これが中身' ;
-      }
- ?>      
+     
 
 	
 
