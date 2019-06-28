@@ -18,11 +18,9 @@
           <div class= "article_title">    
                           <!--タイトルを取得-->
                           <h1><?php the_title(); ?></h1> 
-                          <?php $cate = get_the_category(); 
-                                echo $cate[0] -> cat_name;
-                          ?>
                           <!--投稿日を取得-->
                            <span class="article_date">
+                            <i class="fas fa-pencil-alt"></i>
                             <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
                               <?php echo get_the_date(); ?>
                             </time>
@@ -58,8 +56,7 @@
           <div class="article_archive">
             <p class="latest_title">お知らせ</p>
               <div class="article_loop">
-                <?php query_posts("posts_per_page=3&paged+$paged"); ?>
-                <?php get_template_part('loop', 'blog');?>
+                <?php get_template_part('form', 'loop');?>
               </div>
           
           <div class="list-btn">
@@ -74,6 +71,7 @@
       </div>
 </div>
 </article>
+
 
 
 
