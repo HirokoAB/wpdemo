@@ -3,25 +3,26 @@
 	?>
 
 <main>
+<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+<?php $loop  = new WP_Query(array(
+    "paged" => $paged,
+    "post_type" => "post",
+    "posts_per_page" => 4,
+    "post_status" => "publish"
+  ));
+
+  ?>
+
 
 <div class="article_archive">
             <p class="latest_title">ブログ記事一覧</p>
            <p><?php echo single_term_title(); ?></p>
               <div class="article_loop">
-           <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
-<?php 
-  $args  = array(
-    "paged" => $paged,
-    "post_type" => "post",
-    "posts_per_page" => 4,
-     "post_status" => "publish"
-  )
 
-  ?>
 
 <!-- ここから記事取得のループ -->
 
-  <?php $loop = new WP_Query($args);
+  <?php
   if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
       <div class="container">
@@ -65,20 +66,13 @@
       </div>
     
     <?php endwhile; ?>
+    
+    <?php echo '<div>'.paginate_links(array(
+      'total' => $loop -> max_num_pages
+    )); ?>
     <?php endif; ?>
 
-    <?php echo paginate_links(array(
-            'base' => str_replace( $big,'%#%',esc_url(get_pagenum_link( $big ))),
-            'foramt' => ' ?paged=%#% ',
-            'current' => max( 1, get_query_var( 'paged' )),
-            'total' => $the_query ->max_num_pages,
-            ' show_all ' => true,
-              ));
-              ?>
-
-              <?php $pagination = get_the_posts_pagination(); ?>
-              <?php the_posts_pagination(); ?>
-  </div>
+   </div>
            <div class="list-btn">
             <a href="<?php echo home_url(); ?>">TOPへ</a>
           </div>
