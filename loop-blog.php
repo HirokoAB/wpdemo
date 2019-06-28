@@ -1,5 +1,6 @@
 
 <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+<?php var_dump($paged); ?>
 
 
 <?php 
@@ -61,11 +62,21 @@
 	    </div>
     
     <?php endwhile; ?>
+    	<?php //the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
     <?php endif; ?>
-    <?php  if(function_exists ( 'wp_pagenavi' )){
-    	wp_pagenavi(array( 'query' => $loop ));
-    }?>	
-		<?php the_posts_pagination( array( 'mid_size' => 2 ) ); ?>
+
+
+
+
+
+	   <?php $pagination = get_the_posts_pagination(); ?>
+       <?php  
+      if (is_null($pagination)){
+        echo 'null';
+      }else{
+        echo(var_dump ($pagination)).'これが中身' ;
+      }
+ ?>      
 
 	
 
