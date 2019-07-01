@@ -326,19 +326,6 @@ function cus_excerpt_length($length){
 }
 add_filter(' excerpt_length ' , 'cus_excerpt_length' );
 
-//////////////////////////////////////////
-//////////Thakyou pageのfunction/////////
-/////////////////////////////////////////
-function custom_footer() {
-?>
-	<script>
-	document.addEventListener( 'wpcf7mailsent', function( event ) {
-		location = 'http://localhost/wordpress_sample/thankyou';
-	}, false );
-	</script>
-<?php
-}
-add_action( 'wp_footer', 'custom_footer' );
 
 //////////////////////////////////////////
 //////////  記事一覧の続きの表示　　/////////
