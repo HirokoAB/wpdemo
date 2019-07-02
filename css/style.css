@@ -870,6 +870,12 @@ ul.related_post li img {
   font-size:10px;
 }
 
+.st_nav{
+  position:absolute;
+  left:50%;
+  margin-top:50px;
+}
+
 /*////////////////////////////////////*/
 /*/////// single-staff.php  //////////*/
 /*////////////////////////////////////*/
