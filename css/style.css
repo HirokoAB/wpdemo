@@ -34,12 +34,6 @@ a{
 /*////////////////////////////////////*/
 /*///////////  page.nav  /////////////*/
 /*////////////////////////////////////*/
-.pg_nav{
-  margin: 30px;
-  position: absolute;
-  left:50%;
-}
-
 .dots{
   border:none;
 }
@@ -109,107 +103,6 @@ a{
   
 
 }
-/*記事一覧*/
-
-.articles{
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 80px;
-}
-
-#blog_archive{
-  width: 1027px;
-  margin: auto;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 80px;
-  margin-bottom: 300px;
-}
-
-
-.articles h1{
-  font-size: 30px;
-}
-
-
-.content-box{
-  margin-top: 37px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.content-box li {
-  display: flex;
-  flex-direction: column;
-  margin-right: 33px;
-  margin-bottom: 17px;
-  height: 450px;
-  width: 31.18%;
-  transition: .8s;
-  border-radius: 5px;
-}
-
-.content-box li:nth-child(3),
-.content-box li:last-child{
-  margin-right: 0;
-}
-
-.content-box li:hover{
-  box-shadow: 0 0 8px rgba(0,0,0,.4);
-}
-
-.date{
-  margin-top: 16px;
-  margin-left: 20px;
-
-}
-
-.article{
-  margin: 20px 20px 20px 16px;
-  height: 105px;
-  display: flex;
-  flex-direction: column;
-}
-
-/*READ ME ホバー部分*/
-/*.read{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.next_readme {
-  display: inline-block;
-  padding-bottom: 4px;
-  position: relative;
-  text-align: right;
-  margin-right: 10px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.next::after {
-  margin-top: 10px;
-  background-color: #E7EAEB;
-  bottom: -10px;
-  content: '';
-  display: block;
-  height: 5px;
-  right: 2px;
-  position: absolute;
-  transition: .5s all;
-  width: 21%;
-}
-
-.next:hover::after {
-  width: 96%;
-}
-*/
 
   
 /*/////////widjet////////////*/
@@ -321,6 +214,85 @@ a{
 
 
 /*//////////以下single.php//////////*/
+/*記事一覧*/
+
+.articles{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+#blog_archive{
+  width: 1027px;
+  margin: auto;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 300px;
+}
+
+
+.articles h1{
+  font-size: 30px;
+}
+
+
+.content-box{
+  margin-top: 37px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-box li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 33px;
+  margin-bottom: 17px;
+  height: 450px;
+  width: 31.18%;
+  transition: .8s;
+  border-radius: 5px;
+}
+
+.content-box li:nth-child(3),
+.content-box li:last-child{
+  margin-right: 0;
+}
+
+.content-box li:hover{
+  box-shadow: 0 0 8px rgba(0,0,0,.4);
+}
+
+.date{
+  margin-top: 16px;
+  margin-left: 20px;
+
+}
+
+/*.article-container{
+  margin: 3% 40% 10% 40%; 
+
+}*/
+
+
+.article-upper{
+  margin: 20px 20px 20px 16px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.article-lower{
+  display: flex;
+  flex-direction: column;
+}*/
+
 .latest_title{
   width: 760px;
   margin:auto;
@@ -332,9 +304,6 @@ a{
   margin-top: 300px;
 }
 
-
-.article_container {
-  margin: 3% 40% 10% 40%; }
 
 .cat-data ul {
   margin-bottom: 10px; }
@@ -405,6 +374,8 @@ a{
 }
 .article-container{
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 
