@@ -1,37 +1,35 @@
  <footer>
 
- 	<div class="footer-container">
-	<div class="row ft-conent">
- 		<div class="ft-container1 col-8"> 	
+ 	<div class="container-fluid">
+	<div class="row">
+	 	<div class="col-sm-4" > 	
 
-			<?php wp_nav_menu( array( 
-				'theme_location'  => 'footer-menu',
-				' container_id ' => ' menu3-container ',
-				'  menu_id' => ' 3 ',
-				' menu_class ' => ' menu33333 '
-		)); ?>
-
-		
-		<ul class="sponsor-container col-5">
-		<?php dynamic_sidebar('フッターバ-1'); ?>
-		</ul>
+				<?php wp_nav_menu( array( 
+					'theme_location'  => 'footer-menu',
+					' container_id ' => ' menu3-container ',
+					'  menu_id' => ' 3 ',
+					' menu_class ' => ' menu33333 '
+			)); ?>
 
 		</div>
-		
-			<div class="footer-corp col-4">
-			<h2 class="footer-text">サンプルサンプル会社</h2>
-			<div class="corp-data">
-			<ul class="corp-data-left">
-				<li><span>住</span>所：◯◯◯◯◯◯◯◯1-2-3</li>
-				<li><span>E-mail :</span>sample@sent.com</li>
-			</ul>
-			<ul class="corp-data-right">
-				<li><span>電</span>話 ：</span>123-456-789</li>
-				<li><span>営業時間：</span>00:00 〜　00:00</li>
-			</ul>
-			</div>
-
-    </div>
+		<div class="footer_img col-sm-4">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="">
+		</div>
+			
+		<div class="footer-corp col-sm-4">
+				<h2 class="footer-text">サンプルサンプル会社</h2>
+				<div class="corp-data">
+					<ul class="corp-data-left">
+						<li><span>住</span>所：◯◯◯◯◯◯◯◯1-2-3</li>
+						<li><span>E-mail :</span>sample@sent.com</li>
+					</ul>
+					<ul class="corp-data-right">
+						<li><span>電</span>話 ：</span>123-456-789</li>
+						<li><span>営業時間：</span>00:00 〜　00:00</li>
+					</ul>
+				</div>
+		</div>
 	</div>
 
 

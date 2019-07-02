@@ -964,45 +964,11 @@ footer{
   padding-bottom: 10px;
 }
 
-.footer-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height:90px;
-  margin:auto;
-}
 
-.ft-conent{
-  margin-top:10px;
-}
-
-.ft-container1{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-
-}
 #menu-menu3 li:last-child{
   margin-right:50px;
 
 }
-.sponsor-container{
-  display: flex;
-  padding:0px;
-}
-
-.sponsor-container li {
-  margin-right:15px;
-}
-
-.sponsor-container li:last-child{
-  margin-right: 0px;
-}
-
-.sponsor-container li img{
-  width: 200px;
-}
-
 
 #menu-menu3{
   justify-content: space-between;
@@ -1017,6 +983,15 @@ footer{
 
 #menu-menu3 a {
   color: white;
+}
+
+.footer_img{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.footer_img >img{
+  height: 50px;
 }
 
 .footer-corp{
