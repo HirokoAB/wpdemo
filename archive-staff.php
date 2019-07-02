@@ -41,7 +41,7 @@
 <?php endwhile;?>
 	 </div>
 
-	<?php echo '<div class="pg_nav">'.paginate_links(array(
+	<?php echo '<div class="st_nav">'.paginate_links(array(
       'total' => $loop -> max_num_pages
       )); ?>
 
