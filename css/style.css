@@ -18,7 +18,7 @@ header{
 }
 
 main{
-  padding-top:  100px ;
+  padding-top:  70px ;
   padding-bottom: 150px;
 }
 
@@ -112,7 +112,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 127px auto 0px auto; 
+  margin: 44px auto 0px auto; 
 }
 
 .calendar_wrap{
@@ -213,8 +213,9 @@ a{
 } 
 
 
-/*//////////以下single.php//////////*/
-/*記事一覧*/
+/*/////////////////////////////////////*/
+/*///////////  single.php ////////////*/
+/*////////////////////////////////////*/
 
 .articles{
   display: flex;
@@ -274,7 +275,7 @@ a{
   margin-top: 16px;
   margin-left: 20px;
 
-}
+} 
 
 
 .article-upper{
@@ -283,18 +284,15 @@ a{
   flex-direction: column;
 }
 
+.article-lower{
+  margin-top:100px;
+}
+
 
 .latest_title{
   width: 760px;
   margin:auto;
-}
-
-
-
-.single-container{
-  margin-top: 300px;
-}
-
+} 
 
 .cat-data ul {
   margin-bottom: 10px; }
@@ -409,9 +407,11 @@ a{
   box-sizing: border-box;
   border: 0.5px solid gray; }
 
-  .single-container{
+.single-container{
     margin-top:100px;
   }
+
+
 .coment-container{
   display: flex;
   flex-direction: column;
@@ -448,14 +448,14 @@ a{
 }
 
 
-  .commentarea{
+.commentarea{
     margin-top:300px;
     display: flex;
     align-items: center;
 
   }
 
-  .comment-body{
+.comment-body{
     font-size:14pt;
     margin-top: 5px;
   }
@@ -573,7 +573,7 @@ a{
 
 .breadcrumbs{
   max-width: 1000px;
-  margin: 50px 10px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs span{
