@@ -12,9 +12,9 @@
 	<?php 
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
-    	<div class="container">
-    	<div class= "row">
-        <div class="col-8 archive-container">
+    	<div class="">
+    	<div class= "">
+        <div class=" archive-container">
 	        <div class="post-thumbnail">
 	            <a href="<?php the_permalink() ?>">
 	            <?php if (has_post_thumbnail()): ?>
