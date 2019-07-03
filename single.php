@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <article style="padding-top: 100px">
 	<div class="container">
 		<div class="row">
@@ -33,9 +32,11 @@
 			                    <?php next_post_link('%link','次へ >'); ?>
 			              </span>
 			          	</div>
-					</div>
+					</div>					
+
 	                 <!-- Article lower-->
-	                 <div class="article-lower">
+	                <aside>
+	                	<div class="article-lower">
 			          	<div class="related relate-container">
 			                <?php wp_related_posts();?> 
 			         	</div>
@@ -47,26 +48,21 @@
 			            	<p class="latest_title">お知らせ</p>
 			              	<div class="article_loop">
 
-			                	<?php get_template_part('form', 'loop');?>
-			                	<?php //get_template_part('form','related') ?>
+			                	<?php get_template_part('loop','blog');?>
 
 			             	</div>
 						</div>
-
-
-
-
 						<div class="list-btn">
 			            	<a href="<?php echo home_url(); ?>">TOPへ</a>
 			          	</div>
-			   		</div>
+			   			</div>
+					</div>
+
 			</div>
-			<div class="col-4">
+			<article class="col-4">
 				<?php get_template_part('sidebar'); ?>
-			</div>
-			
-			
-		</div>
+			</article>	
+		</aside>
 	</div>
 </article>
 
