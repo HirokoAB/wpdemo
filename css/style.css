@@ -984,6 +984,9 @@ footer{
   height: 100px;
   padding-bottom: 10px;
 }
+#footer{
+  
+}
 
 
 #menu-menu3 li:last-child{
@@ -1019,9 +1022,8 @@ footer{
   display: flex;
   flex-direction:column;
   justify-content: center;
-  align-items:center;
+  align-items:flex-end;
   padding-right: 38px;
-  font-size: 15px;  
 }
 
 .corp-data{
@@ -1040,8 +1042,7 @@ footer{
 
 
 .footer-corp h2{
-  text-align: center;
-  margin-bottom: 10px;
+  margin:auto;
 }
 
 .footer-corp li >span{
@@ -1049,11 +1050,6 @@ footer{
   width: 30px;
   letter-spacing: 5px;
 
-}
-
-.footer-corp li:nth-child(1)>span,
-.footer-corp li:nth-child(3)>span{
-  letter-spacing: 35px;
 }
 
 

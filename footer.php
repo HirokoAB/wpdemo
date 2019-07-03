@@ -1,4 +1,4 @@
- <footer>
+ <footer id="footer">
 
  	<div class="container-fluid">
 	<div class="row">
@@ -13,25 +13,30 @@
 
 		</div>
 		<div class="footer_img col-sm-4">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="sponcor_img1">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="sponcor_img2">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/sponsor.png" alt="sponcor_img3">
 		</div>
 			
-		<div class="footer-corp col-sm-4">
+		<adress class="footer-corp col-sm-4">
 				<h2 class="footer-text">サンプルサンプル会社</h2>
 				<div class="corp-data">
 					<ul class="corp-data-left">
-						<li><span>住</span>所：◯◯◯◯◯◯◯◯1-2-3</li>
-						<li><span>E-mail :</span>sample@sent.com</li>
+						<li>住所：◯◯◯◯◯◯◯◯1-2-3</li>
+						<li>E-mail:sample@sent.com</li>
 					</ul>
 					<ul class="corp-data-right">
-						<li><span>電</span>話 ：</span>123-456-789</li>
-						<li><span>営業時間：</span>00:00 〜　00:00</li>
+						<li>電話：123-456-789</li>
+						<li>営業時間：00:00 〜　00:00</li>
 					</ul>
 				</div>
-		</div>
+		</adress>
 	</div>
-
+<script type="text/javascript">
+	
+	console.log($.fn.jquery);
+	console.log('HOGEHOGE');
+</script>
 
     </footer>
 
