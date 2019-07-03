@@ -411,7 +411,7 @@ a{
     margin-top:100px;
   }
 
-
+/*display comment css*/
 .coment-container{
   display: flex;
   flex-direction: column;
@@ -459,6 +459,7 @@ a{
     font-size:14pt;
     margin-top: 5px;
   }
+
 .comment-body::after{
   content: "";
   display: inline-block;
@@ -474,6 +475,10 @@ a{
   .comment-body p::before{
     content:" コメント内容： ";
 
+  }
+
+  .children{
+    width: 98%;
   }
 
   .reply{
@@ -512,7 +517,9 @@ a{
   border: solid 1px black;
 
  }
-
+.comment-awaiting-moderation{
+ font-size: 14px;
+}
  .form-submit{
     text-align: center;
     margin-top:10px;
@@ -522,8 +529,31 @@ a{
   font-size:17px;
   padding:10px;
   border: solid 1px black;
+  margin-top: 20px;
+  cursor:pointer;
  }
 
+/*respond comment CSS*/
+
+.comment-respond  input {
+  display: inline-block;
+  width:60%;
+  border: solid 0.5px #000000;
+
+}
+
+
+.comment-form-author label,
+.comment-form-url label,
+.comment-form-email label{
+  width:120px;
+  text-align: justify;
+}
+
+
+.comment-respond p{
+  margin-bottom:10px;
+}
 
 
 /*////////////////////////////////////*/
