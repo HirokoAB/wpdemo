@@ -4,21 +4,21 @@
 
 <main>
 <?php
-$category = get_the_category(); ?>
+$category = get_the_category();
+$catname = $category[0]->cat_name ?>
 <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
 <?php $loop  = new WP_Query(array(
     "paged" => $paged,
     "post_type" => "post",
     "posts_per_page" => 4,
     "post_status" => "publish",
-    'category_name'=>$category[0]->cat_name, 
+    'category_name'=>$catname, 
   ));
 
   ?>
 
 <div class="article_archive">
-            <p class="latest_title">ブログ記事一覧</p>
-           <p><?php echo single_term_title(); ?></p>
+            <p class="latest_title"><?php echo " $catname "; ?>記事一覧</p>
               <div class="article_loop">
 
 
