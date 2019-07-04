@@ -376,7 +376,9 @@ add_action( 'after_setup_theme', 'my_remove_cf7_js_css' );
 // contact form 7のjsとcssを読み込み　/////
 /////////////////////////////////////////
 
-
+/**
+ *    contact form 7のjsとcssを読み込み
+ */
 function my_enable_cf7_js_css() {
   /**
    * スラッグが「contact」のページだけ読み込み
@@ -385,11 +387,10 @@ function my_enable_cf7_js_css() {
         if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
             wpcf7_enqueue_scripts();
         }
+
     }
 }
 add_action( 'wp_enqueue_scripts', 'my_enable_cf7_js_css' );
-
-
 
 
 
