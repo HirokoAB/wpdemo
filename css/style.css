@@ -18,7 +18,7 @@ header{
 }
 
 main{
-  padding-top:  70px ;
+  padding-top:  100px;
   padding-bottom: 150px;
 }
 
@@ -981,25 +981,19 @@ ul.related_post li img {
 footer{
   background-color: #000;
   color: white;
-  height: 100px;
-  padding-bottom: 10px;
+  height: auto;
+  padding-bottom: 20px;
 }
-#footer{
-  
-}
-
-
-#menu-menu3 li:last-child{
-  margin-right:50px;
-
+.footer-menu{
+  flex-direction: column;
+  justify-content: center;
+  margin-top:3px;
 }
 
 #menu-menu3{
   justify-content: space-between;
   margin-right:0px;
-  height: 70px;
-  align-items:flex-start;
-  padding-top:6px;
+  height: auto;
 }
 #menu-menu3 li:first-child{
   margin-left:0px;
@@ -1018,17 +1012,17 @@ footer{
   height: 50px;
 }
 
-.footer-corp{
+.footer-add{
   display: flex;
   flex-direction:column;
   justify-content: center;
-  align-items:flex-end;
-  padding-right: 38px;
+  align-items:center;
+  padding-top: 15px;
 }
 
 .corp-data{
   display: flex;
-  align-items:center;
+  margin-top:10px;
 }
 
 .corp-data-left,
@@ -1042,7 +1036,7 @@ footer{
 
 
 .footer-corp h2{
-  margin:auto;
+  margin:0px auto;
 }
 
 .footer-corp li >span{
