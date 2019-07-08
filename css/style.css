@@ -53,6 +53,75 @@ a{
 }
 
 
+/*/////////////////////////////////////*/
+/*///////////  header.img ////////////*/
+/*////////////////////////////////////*/
+
+.header-img{
+  margin-bottom:32px;
+}
+.header-img> img{
+  display: block;
+  margin:auto;
+  width: 1165px;
+  height: 400px;
+  object-fit: cover;
+  
+
+}
+
+  
+/*/////////widjet////////////*/
+
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 54px auto 0px auto; 
+}
+
+.calendar_wrap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.calendar_wrap > caption{
+    text-align: center;}
+
+.searchform{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.searchform input[type="text"]{
+
+  height:35px;
+  width: 230px;
+  box-sizing: border-box;
+  border: gray solid 1px;
+  border-radius:5px;
+}
+
+#searchsubmit{
+  height:35px;
+  font-size:18px;
+  box-sizing: border-box;
+  border: solid 1px;
+  padding:4px 9px;
+  background-color: black;
+  color: white;
+  border-radius:5px;
+  text-align: right;
+}
+
+.screen-reader-text{
+  font-size:18px;
+  display: none;
+}
+
+
+
 
 
 /*記事一覧*/
