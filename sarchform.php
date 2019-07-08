@@ -1,4 +1,3 @@
-
  
 <div class="search">
 <form id="cse-search-box" action="http://google.com/cse">
