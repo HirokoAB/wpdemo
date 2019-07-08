@@ -13,12 +13,11 @@
 						<div class="article_img">
 		                	<?php the_post_thumbnail('large'); ?>
 		              	</div>
-		              	<div class= "article_title">
-
 		              	<div class="info-cate">
 				          <?php $term = wp_get_post_terms( $post -> ID ,'info',array("fields" => "names")); ?>
 				          <span class="info-cate"><?php echo $term [0]?></span>
 				        </div>
+				      	<div class= "article_title">
 		              		<!--タイトルを取得-->
 		                    <h1><?php the_title(); ?></h1>
 		                    <!--投稿日を取得-->
