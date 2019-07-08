@@ -58,6 +58,12 @@
     		<?php echo '<div class="pg_nav">'.paginate_links(array(
              'total' => $loop -> max_num_pages
       )); ?>
+      <?php 	
+      	var_dump($page);
+
+
+      ; ?>
+
     <?php endif; ?>
 
 
