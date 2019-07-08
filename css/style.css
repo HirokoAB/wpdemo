@@ -925,9 +925,9 @@ ul.related_post li img {
 
 .form{
   height:45px;
-  border: solid 1px gray; 
+  border: solid 1px gray;
+  text-indent:1em; 
 }
-
 
 
 
