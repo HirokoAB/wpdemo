@@ -706,8 +706,13 @@ background-color: #dedede;
 /*////////////////////////////////////*/
 
 .thankyou{
-  margin: 400px 0px 400px 0px;
+  margin: 300px;
   font-size:30px;
+  text-align: center;
+}
+
+.thank_title{
+  margin-bottom: 5px;
 }
 
 
