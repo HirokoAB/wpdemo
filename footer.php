@@ -22,12 +22,12 @@
 					<h2 class="footer-text">サンプルサンプル会社</h2>
 					<div class="corp-data">
 						<ul class="corp-data-left">
-							<li>住所：◯◯◯◯◯◯◯◯1-2-3</li>
-							<li>E-mail:sample@sent.com</li>
+							<li>住&emsp;所：◯◯◯◯◯◯◯◯1-2-3</li>
+							<li>E-mail：sample@sent.com</li>
 						</ul>
 						<ul class="corp-data-right">
-							<li>電話：123-456-789</li>
-							<li>営業時間：00:00 〜　00:00</li>
+							<li>電&emsp;&emsp;話：123-456-789</li>
+							<li>営業時間：00:00 〜 00:00</li>
 						</ul>
 					</div>
 			</adress>
