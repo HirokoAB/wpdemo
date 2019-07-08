@@ -616,40 +616,28 @@ a{
 /*////////////////////////////////////*/
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
-
-.form-container{
-  align-items:center;
-
+.wpcf7{
+  max-width: 100%;
+  margin:auto;
 }
-.contact-title{
-text-align: center;
-color: gray;
-margin-top:100px;
-
-}
-.contact-title >h1 {
-font-size:20px;
-}
-.contact-title >h2 {
-font-size:15px;
+.wpcf7-form label{
+  margin-bottom: 15px;
+} 
+.c7-name,.c7-mail,.c7-title{
+  height: 40px;
+  border:solid 1px gray ;
 }
 
-
-.contact-row{
-  justify-content: center;
-  margin-top:30px;
-}
-
-.contact-form{
-
-  margin:50px auto 300px auto;
+.wpcf7-submit{
+  display: inline-block;
+  border:solid 1px black;
+  padding:10px 20px;
+  align-items:right;
+  background-color: #c5c5c5;
 
 }
-
-
-.text-center > button{
-  background-color: black;
-  color:white;
+.wpcf7-textarea{
+  border:solid 1px gray ;  
 }
 
 
@@ -718,8 +706,13 @@ background-color: #dedede;
 /*////////////////////////////////////*/
 
 .thankyou{
-  margin: 400px 0px 400px 0px;
+  margin: 300px;
   font-size:30px;
+  text-align: center;
+}
+
+.thank_title{
+  margin-bottom: 5px;
 }
 
 
@@ -768,7 +761,7 @@ ul.related_post li img {
 /*////////////////////////////////////*/
 
 .basic-yop-poll-container{
-  padding:5px;
+  padding:2px;
 }
 
 
@@ -776,6 +769,13 @@ ul.related_post li img {
 
     background-color: #900;
 
+}
+.basic-question-title{
+  font-size: 1rem;
+}
+.basic-text{
+  font-weight: 300;
+  font-size: 19px;
 }
 
 
@@ -896,6 +896,30 @@ ul.related_post li img {
   left:50%;
   margin-top:50px;
 }
+
+/*////////////////////////////////////*/
+/*///////////  sarch.php  //////////*/
+/*////////////////////////////////////*/
+
+.sc_submit{
+  padding:10px;
+  border: solid 1px gray; 
+}
+
+.form{
+  height:45px;
+  border: solid 1px gray; 
+}
+
+
+
+
+
+
+
+
+
+
 
 /*////////////////////////////////////*/
 /*/////// single-staff.php  //////////*/

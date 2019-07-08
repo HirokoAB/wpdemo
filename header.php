@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8">
+
   
   
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/footerFixed.js"></script>
@@ -15,8 +16,8 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/owl/assets/css/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  <?php  wp_head(); ?>
 
-　
   <title>アメリカンビレッジ</title>
 </head>
 
