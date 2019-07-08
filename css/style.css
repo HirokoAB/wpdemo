@@ -618,6 +618,7 @@ a{
 /*////////////////////////////////////*/
 .wpcf7{
   max-width: 100%;
+  margin:auto;
 }
 .wpcf7-form label{
   margin-bottom: 15px;
@@ -627,6 +628,17 @@ a{
   border:solid 1px gray ;
 }
 
+.wpcf7-submit{
+  display: inline-block;
+  border:solid 1px black;
+  padding:10px 20px;
+  align-items:right;
+  background-color: #c5c5c5;
+
+}
+.wpcf7-textarea{
+  border:solid 1px gray ;  
+}
 
 
 
