@@ -2,7 +2,7 @@
 	<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
 	<?php $loop  = new WP_Query(array(
     "paged" => $paged,
-    "posts_per_page" => 2,
+    "posts_per_page" => 4,
     "post_status" => "publish"
   	));?>
 
