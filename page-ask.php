@@ -5,13 +5,13 @@
 	</div>
 </div>
 <?php 
-	//echo <<<EOM
-// 	<script>
-// document.addEventListener( 'wpcf7mailsent', function( event ) {
-//     location = 'http://localhost/wordpress_sample/thankyou/';
-// }, false );
-// </script>
-//EOM;
+	echo <<<EOM
+	<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'http://localhost/wordpress_sample/thankyou/';
+}, false );
+</script>
+EOM;
 		
  ?>
 

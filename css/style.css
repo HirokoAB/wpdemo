@@ -616,50 +616,30 @@ a{
 /*////////////////////////////////////*/
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
-
 .wpcf7{
-  display: flex;
-  justify-content: center;
+  max-width: 100%;
+  margin:auto;
+}
+.wpcf7-form label{
+  margin-bottom: 15px;
+} 
+.c7-name,.c7-mail,.c7-title{
+  height: 40px;
+  border:solid 1px gray ;
 }
 
-
-
-
-/*.form-container{
-  align-items:center;
-
-}
-.contact-title{
-text-align: center;
-color: gray;
-margin-top:100px;
+.wpcf7-submit{
+  display: inline-block;
+  border:solid 1px black;
+  padding:10px 20px;
+  align-items:right;
+  background-color: #c5c5c5;
 
 }
-.contact-title >h1 {
-font-size:20px;
-}
-.contact-title >h2 {
-font-size:15px;
+.wpcf7-textarea{
+  border:solid 1px gray ;  
 }
 
-
-.contact-row{
-  justify-content: center;
-  margin-top:30px;
-}
-
-.contact-form{
-
-  margin:50px auto 300px auto;
-
-}
-
-
-.text-center > button{
-  background-color: black;
-  color:white;
-}
-*/
 
 
 /*////////////////////////////////////*/
@@ -978,15 +958,6 @@ ul.related_post li img {
   margin-top: 5%; 
   text-align:center;
 }
-
-
-/*.pre_text {
-  position: absolute;
-  left: 50%; }
-
-.next_text {
-  position: absolute;
-  right: 50%; }*/
 
 .staff-archive-btn{
     margin-top: 200px;
