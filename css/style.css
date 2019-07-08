@@ -620,6 +620,13 @@ a{
   max-width: 100%;
   margin:auto;
 }
+
+.wpcf7 input,
+.wpcf7 textarea{
+  width: 816px;
+}
+
+     
 .wpcf7-form label{
   margin-bottom: 15px;
 } 
@@ -706,8 +713,13 @@ background-color: #dedede;
 /*////////////////////////////////////*/
 
 .thankyou{
-  margin: 400px 0px 400px 0px;
+  margin: 300px;
   font-size:30px;
+  text-align: center;
+}
+
+.thank_title{
+  margin-bottom: 5px;
 }
 
 
@@ -720,13 +732,13 @@ background-color: #dedede;
   text-align: center;
   margin-top:40px;
 }
-ul.related_post {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin:30px auto;
-}
+/*ul.related_post {
+  max-width: 100%!important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  margin:30px auto !important;
+}*/
 ul.related_post li {
   max-width: 150px;
   
@@ -756,7 +768,8 @@ ul.related_post li img {
 /*////////////////////////////////////*/
 
 .basic-yop-poll-container{
-  padding:5px;
+  padding:2px;
+  margin:auto;
 }
 
 
@@ -765,6 +778,29 @@ ul.related_post li img {
     background-color: #900;
 
 }
+.basic-question-title{
+  font-size: 1.1rem !important;
+}
+.basic-text{
+  font-weight: 300;
+  font-size: 19px;
+}
+.basic-yop-poll-container{
+  width:90% !important;
+} 
+
+
+/*////////////////////////////////////*/
+/*///////////  SNS  //////////*/
+/*////////////////////////////////////*/
+
+#the_champ_fb_commenting{
+  margin-top: 20px;
+}
+
+
+
+
 
 
 
@@ -796,6 +832,7 @@ ul.related_post li img {
   display: flex;
   align-items: center;
   margin:20px auto;
+  min-width: 730px;
 }
 
 .post-thumbnail img{
@@ -886,6 +923,30 @@ ul.related_post li img {
 }
 
 /*////////////////////////////////////*/
+/*///////////  sarch.php  //////////*/
+/*////////////////////////////////////*/
+
+.sc_submit{
+  padding:10px;
+  border: solid 1px gray; 
+}
+
+.form{
+  height:45px;
+  border: solid 1px gray;
+  text-indent:1em; 
+}
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////*/
 /*/////// single-staff.php  //////////*/
 /*////////////////////////////////////*/
 .single-staff{
@@ -927,6 +988,7 @@ ul.related_post li img {
   margin-top: 5%; 
   text-align:center;
 }
+
 
 .staff-archive-btn{
     margin-top: 200px;
