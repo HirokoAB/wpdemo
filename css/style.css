@@ -762,6 +762,7 @@ ul.related_post li img {
 
 .basic-yop-poll-container{
   padding:2px;
+  margin:auto;
 }
 
 
@@ -771,12 +772,28 @@ ul.related_post li img {
 
 }
 .basic-question-title{
-  font-size: 1rem;
+  font-size: 1.1rem !important;
 }
 .basic-text{
   font-weight: 300;
   font-size: 19px;
 }
+.basic-yop-poll-container{
+  width:90% !important;
+} 
+
+
+/*////////////////////////////////////*/
+/*///////////  SNS  //////////*/
+/*////////////////////////////////////*/
+
+#the_champ_fb_commenting{
+  margin-top: 20px;
+}
+
+
+
+
 
 
 
