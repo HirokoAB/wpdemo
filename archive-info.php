@@ -1,7 +1,11 @@
+
 <?php 
 
-	get_header();
-	?>
+  /*
+  Template Name:Archive-info
+  */
+  get_header();
+  ?>
   <!-- 表示件数を指定するための配列 -->
   <?php $args =  array( 
       'posts_per_page' => 5,
@@ -39,6 +43,7 @@
             <p>まだ投稿はありません</p>
       
     <?php endif; ?>
+
 
   </div>
 
