@@ -776,7 +776,7 @@ ul.related_post li img {
 /*////////////////////////////////////*/
 
 .basic-yop-poll-container{
-  padding:5px;
+  padding:2px;
 }
 
 
@@ -784,6 +784,13 @@ ul.related_post li img {
 
     background-color: #900;
 
+}
+.basic-question-title{
+  font-size: 1rem;
+}
+.basic-text{
+  font-weight: 300;
+  font-size: 19px;
 }
 
 
@@ -904,6 +911,30 @@ ul.related_post li img {
   left:50%;
   margin-top:50px;
 }
+
+/*////////////////////////////////////*/
+/*///////////  sarch.php  //////////*/
+/*////////////////////////////////////*/
+
+.sc_submit{
+  padding:10px;
+  border: solid 1px gray; 
+}
+
+.form{
+  height:45px;
+  border: solid 1px gray; 
+}
+
+
+
+
+
+
+
+
+
+
 
 /*////////////////////////////////////*/
 /*/////// single-staff.php  //////////*/
