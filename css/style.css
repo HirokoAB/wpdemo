@@ -620,6 +620,13 @@ a{
   max-width: 100%;
   margin:auto;
 }
+
+.wpcf7 input,
+.wpcf7 textarea{
+  width: 816px;
+}
+
+     
 .wpcf7-form label{
   margin-bottom: 15px;
 } 
