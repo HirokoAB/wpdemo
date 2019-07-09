@@ -32,7 +32,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
             </div>
 
-            <div class="nav col-xl-10">
+            <div class="nav col-xl-10 col-lg-12">
               <?php wp_nav_menu(); ?> 
             </div>
         </div>

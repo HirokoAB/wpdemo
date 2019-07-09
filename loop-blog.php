@@ -12,8 +12,7 @@
 	<?php 
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
-    	<div class="">
-    	<div class= "">
+
         <div class=" archive-container">
 	        <div class="post-thumbnail">
 	            <a href="<?php the_permalink() ?>">
@@ -51,8 +50,7 @@
 
 
 	    </div>
-	    </div>
-	    </div>
+
     
     <?php endwhile; ?>
     		<?php echo '<div class="pg_nav">'.paginate_links(array(
