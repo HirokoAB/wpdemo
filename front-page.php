@@ -20,7 +20,6 @@
       </div>
       <div class="col-3">
         <?php dynamic_sidebar('サイドバー2'); ?>
-        <?php echo do_shortcode('[wpdm_package id="504"]'); ?>
       </div>
     </div>
   </div>
