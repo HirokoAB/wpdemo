@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/owl/assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/owl/assets/css/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
   <?php  wp_head(); ?>
 
   <title>アメリカンビレッジ</title>
@@ -25,16 +25,17 @@
 <body>
 
   <header id=fixed>
-      <div class="head-container">
-        <div class="head-contents">
+      <div class="head-container container-fuluid">
+        <div class="head-contents row">
 
-          <div class="head-img">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
-          </div>
+            <div class="head-img col-xl-2">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
+            </div>
 
-          <div class="nav">
-          <?php wp_nav_menu(); ?> 
-          </div>
-     </div>
-    </div>
+            <div class="nav col-xl-10">
+              <?php wp_nav_menu(); ?> 
+            </div>
+        </div>
+      </div>
+
   </header>

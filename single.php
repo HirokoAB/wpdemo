@@ -18,10 +18,10 @@
 		                    <h1><?php the_title(); ?></h1>
 		                    <!--投稿日を取得-->
 		                    <span class="article_date">
-		                        <i class="fas fa-pencil-alt"></i>
 		                        <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date(); ?></time>
 		                    </span>
 		              	</div>
+                    <!-- 本文取得 -->
 		              	<div class="article_content"><?php the_content(); ?></div>
 		         	<?php endif;?>
 		              	<div class="nav-below">
@@ -37,9 +37,9 @@
 	                 <!-- Article lower-->
 	                <aside>
 	                	<div class="article-lower">
-			          	<div class="related relate-container">
+			          	  <div class="related relate-container">
 			                <?php wp_related_posts();?> 
-			         	</div>
+			         	     </div>
 			         	 <!-- コメント欄の表示 -->
 			          	<div class="coment-container">
 			            	<?php comments_template(); ?>
@@ -51,10 +51,10 @@
 			                	<?php get_template_part('loop','blog');?>
 
 			             	</div>
-						</div>
-						<div class="list-btn">
+						    </div>
+						    <div class="list-btn">
 			            	<a href="<?php echo home_url(); ?>">TOPへ</a>
-			          	</div>
+			          </div>
 			   			</div>
 					</div>
 

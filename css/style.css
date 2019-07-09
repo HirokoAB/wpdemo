@@ -1,3 +1,4 @@
+
 #fixed{
   position: fixed;
   width: 100%;
@@ -86,7 +87,17 @@ a{
   font-size: 15px;
   font-family: "游ゴシック体", YuGothic;
 }
+.nav{
+  justify-content: flex-end;
+  padding-right: 0px;
+}
 
+.menu li:last-child > a{
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid black;
+  border-radius:20px;
+}
 /*/////////////////////////////////////*/
 /*///////////  header.img ////////////*/
 /*////////////////////////////////////*/
@@ -208,9 +219,81 @@ a{
   text-align: right;
 }
 
+
+/*/////////////////////////////////////*/
+/*///////////  header.img ////////////*/
+/*////////////////////////////////////*/
+
+.header-img{
+  margin-bottom:32px;
+}
+.header-img> img{
+  display: block;
+  margin:auto;
+  width: 1165px;
+  height: 400px;
+  object-fit: cover;
+  
+
+}
+
+  
+/*/////////widjet////////////*/
+
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 54px auto 0px auto; 
+}
+
+.calendar_wrap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.calendar_wrap > caption{
+    text-align: center;}
+
+.searchform{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.searchform input[type="text"]{
+
+  height:35px;
+  width: 230px;
+  box-sizing: border-box;
+  border: gray solid 1px;
+  border-radius:5px;
+}
+
+#searchsubmit{
+  height:35px;
+  font-size:18px;
+  box-sizing: border-box;
+  border: solid 1px;
+  padding:4px 9px;
+  background-color: black;
+  color: white;
+  border-radius:5px;
+  text-align: right;
+}
+
+.screen-reader-text{
+  font-size:18px;
+  display: none;
+}
+
+
+
+
 .basic-vote-button{
   margin:10px;
 } 
+
 
 
 /*/////////////////////////////////////*/
@@ -620,6 +703,13 @@ a{
   max-width: 100%;
   margin:auto;
 }
+
+.wpcf7 input,
+.wpcf7 textarea{
+  width: 816px;
+}
+
+     
 .wpcf7-form label{
   margin-bottom: 15px;
 } 
@@ -725,13 +815,7 @@ background-color: #dedede;
   text-align: center;
   margin-top:40px;
 }
-ul.related_post {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin:30px auto;
-}
+
 ul.related_post li {
   max-width: 150px;
   
@@ -762,6 +846,7 @@ ul.related_post li img {
 
 .basic-yop-poll-container{
   padding:2px;
+  margin:auto;
 }
 
 
@@ -771,12 +856,28 @@ ul.related_post li img {
 
 }
 .basic-question-title{
-  font-size: 1rem;
+  font-size: 1.1rem !important;
 }
 .basic-text{
   font-weight: 300;
   font-size: 19px;
 }
+.basic-yop-poll-container{
+  width:90% !important;
+} 
+
+
+/*////////////////////////////////////*/
+/*///////////  SNS  //////////*/
+/*////////////////////////////////////*/
+
+#the_champ_fb_commenting{
+  margin-top: 20px;
+}
+
+
+
+
 
 
 
@@ -808,6 +909,7 @@ ul.related_post li img {
   display: flex;
   align-items: center;
   margin:20px auto;
+  min-width: 730px;
 }
 
 .post-thumbnail img{
@@ -908,9 +1010,9 @@ ul.related_post li img {
 
 .form{
   height:45px;
-  border: solid 1px gray; 
+  border: solid 1px gray;
+  text-indent:1em; 
 }
-
 
 
 
@@ -1061,6 +1163,9 @@ footer{
   letter-spacing: 5px;
 
 }
+
+
+
 
 
 

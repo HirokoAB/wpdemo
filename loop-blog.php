@@ -2,7 +2,7 @@
 	<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
 	<?php $loop  = new WP_Query(array(
     "paged" => $paged,
-    "posts_per_page" => 2,
+    "posts_per_page" => 4,
     "post_status" => "publish"
   	));?>
 
@@ -58,6 +58,7 @@
     		<?php echo '<div class="pg_nav">'.paginate_links(array(
              'total' => $loop -> max_num_pages
       )); ?>
+
     <?php endif; ?>
 
 

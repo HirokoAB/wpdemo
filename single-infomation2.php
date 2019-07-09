@@ -15,14 +15,14 @@
                 <?php the_post_thumbnail('large'); ?>
               </div>
 
-          <div class= "article_title">    
+          <div class="info-cate">
+          <?php $term = wp_get_post_terms( $post -> ID ,'info',array("fields" => "names")); ?>
+            <span class="info-cate"><?php echo $term [0]?></span>
+          </div>
+          <div class= "info_article_title">  
                           <!--タイトルを取得-->
-                          <h1><?php the_title(); ?></h1> 
-                          <?php $cate = get_the_category(); 
-                                echo $cate[0] -> cat_name;
-                          ?>
+                          <h1><?php the_title(); ?></h1>
 
-                          mamammamamama
                           <!--投稿日を取得-->
                            <span class="article_date">
                             <time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
@@ -50,19 +50,10 @@
                     <?php next_post_link('%link','次へ >'); ?>
               </span>
           </div>
-          <div class="related relate-container">
+          <!-- <div class="related relate-container">
                 <?php get_template_part('form', 'related');?>
-          </div>
-          <!-- コメント欄の表示 -->
-          <div class="coment-container">
-            <?php comments_template(); ?>
-          </div>
+          </div> -->
           <div class="article_archive">
-            <p class="latest_title">お知らせ</p>
-              <div class="article_loop">
-                <?php query_posts("posts_per_page=3&paged+$paged"); ?>
-                <!-- <?php get_template_part('loop', 'blog');?> -->
-              </div>
           
           <div class="list-btn">
             <a href="<?php echo home_url(); ?>">TOPへ</a>
