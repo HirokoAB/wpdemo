@@ -806,13 +806,7 @@ background-color: #dedede;
   text-align: center;
   margin-top:40px;
 }
-/*ul.related_post {
-  max-width: 100%!important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  margin:30px auto !important;
-}*/
+
 ul.related_post li {
   max-width: 150px;
   
