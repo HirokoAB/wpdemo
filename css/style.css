@@ -87,6 +87,12 @@ a{
   font-family: "游ゴシック体", YuGothic;
 }
 
+.menu li:last-child > a{
+  box-sizing: border-box;
+  padding:10px;
+  border:1px solid black;
+  border-radius:20px;
+}
 /*/////////////////////////////////////*/
 /*///////////  header.img ////////////*/
 /*////////////////////////////////////*/
