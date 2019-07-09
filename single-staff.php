@@ -30,7 +30,7 @@
                     <?php next_post_link('%link','次へ >'); ?>
               </span>
           </div>
-<div class="staff-archive-btn">
+<div class="list-btn">
             <a href="<?php echo get_post_type_archive_link( 'staff'); ?>">TOP</a>
           </div>          
 
