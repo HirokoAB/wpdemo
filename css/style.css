@@ -18,7 +18,7 @@ header{
 }
 
 main{
-  padding-top:  100px ;
+  padding-top:  100px;
   padding-bottom: 150px;
 }
 
@@ -113,7 +113,7 @@ a{
   flex-direction: column;
   align-items: center;
   margin: 55px auto 0px auto; 
-}
+
 
 .calendar_wrap{
   margin-top: 40px;
@@ -208,13 +208,86 @@ a{
   text-align: right;
 }
 
+
+/*/////////////////////////////////////*/
+/*///////////  header.img ////////////*/
+/*////////////////////////////////////*/
+
+.header-img{
+  margin-bottom:32px;
+}
+.header-img> img{
+  display: block;
+  margin:auto;
+  width: 1165px;
+  height: 400px;
+  object-fit: cover;
+  
+
+}
+
+  
+/*/////////widjet////////////*/
+
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 54px auto 0px auto; 
+}
+
+.calendar_wrap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.calendar_wrap > caption{
+    text-align: center;}
+
+.searchform{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.searchform input[type="text"]{
+
+  height:35px;
+  width: 230px;
+  box-sizing: border-box;
+  border: gray solid 1px;
+  border-radius:5px;
+}
+
+#searchsubmit{
+  height:35px;
+  font-size:18px;
+  box-sizing: border-box;
+  border: solid 1px;
+  padding:4px 9px;
+  background-color: black;
+  color: white;
+  border-radius:5px;
+  text-align: right;
+}
+
+.screen-reader-text{
+  font-size:18px;
+  display: none;
+}
+
+
+
+
 .basic-vote-button{
   margin:10px;
 } 
 
 
-/*//////////以下single.php//////////*/
-/*記事一覧*/
+
+/*/////////////////////////////////////*/
+/*///////////  single.php ////////////*/
+/*////////////////////////////////////*/
 
 .articles{
   display: flex;
@@ -224,6 +297,7 @@ a{
   flex-direction: column;
   margin-top: 80px;
 }
+
 
 #blog_archive{
   width: 1027px;
@@ -272,20 +346,15 @@ a{
 .date{
   margin-top: 16px;
   margin-left: 20px;
-
 }
+
 
 
 .article-upper{
   margin: 20px 20px 20px 16px;
-  height: 105px;
   display: flex;
   flex-direction: column;
 }
-
-
-
-
 
 .single-container{
   margin-top: 300px;
@@ -339,8 +408,11 @@ a{
 .nav-below {
   position: relative;
   width: 100%;
+  height:auto;
   margin-top: 5%;
-  font-size: 15px; }
+  font-size: 15px;
+   }
+
 
 .pre_text {
   position: absolute;
@@ -403,9 +475,11 @@ a{
   box-sizing: border-box;
   border: 0.5px solid gray; }
 
-  .single-container{
+.single-container{
     margin-top:100px;
   }
+
+/*display comment css*/
 .coment-container{
   display: flex;
   flex-direction: column;
@@ -436,23 +510,24 @@ a{
 
 
 .commentlist{
-  width: 60%;
+  width: 90%;
   margin:auto;
   text-align: left;
 }
 
 
-  .commentarea{
+.commentarea{
     margin-top:300px;
     display: flex;
     align-items: center;
 
   }
 
-  .comment-body{
+.comment-body{
     font-size:14pt;
     margin-top: 5px;
   }
+
 .comment-body::after{
   content: "";
   display: inline-block;
@@ -470,8 +545,13 @@ a{
 
   }
 
+  .children{
+    width: 98%;
+  }
+
   .reply{
     margin-top:10px;
+    text-align: right
   }
  .coment-form{
   display: block;
@@ -493,30 +573,55 @@ a{
  }
 
  .comment-form-comment textarea{
-  height:300px;
-  width:60%;
+  width:100%;
   border-radius: 4px;
   margin:auto;
  }
 
  .comment-reply-link{
-  font-size: 12px;
-  padding:5px;
+  font-size: 15px;
+  padding:5px 10px;
   border: solid 1px black;
 
  }
-
+.comment-awaiting-moderation{
+ font-size: 14px;
+}
  .form-submit{
     text-align: center;
     margin-top:10px;
+    width: 40%;
  }
 
  .submit{
   font-size:17px;
   padding:10px;
   border: solid 1px black;
+  margin-top: 20px;
+  cursor:pointer;
  }
 
+/*respond comment CSS*/
+
+.comment-respond  input { 
+  height: 50px;
+  border: solid 0.5px #000000;
+}
+
+
+.comment-form-author label,
+.comment-form-url label,
+.comment-form-email label{
+  text-align: left;
+
+}
+
+
+.comment-respond p{
+  margin-bottom:10px;
+  display: flex;
+  flex-direction: column;
+}
 
 
 /*////////////////////////////////////*/
@@ -566,7 +671,7 @@ a{
 
 .breadcrumbs{
   max-width: 1000px;
-  margin: 50px 10px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs span{
@@ -579,40 +684,35 @@ a{
 /*////////////////////////////////////*/
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
-
-.form-container{
-  align-items:center;
-
-}
-.contact-title{
-text-align: center;
-color: gray;
-margin-top:100px;
-
-}
-.contact-title >h1 {
-font-size:20px;
-}
-.contact-title >h2 {
-font-size:15px;
+.wpcf7{
+  max-width: 100%;
+  margin:auto;
 }
 
-
-.contact-row{
-  justify-content: center;
-  margin-top:30px;
+.wpcf7 input,
+.wpcf7 textarea{
+  width: 816px;
 }
 
-.contact-form{
-
-  margin:50px auto 300px auto;
-
+     
+.wpcf7-form label{
+  margin-bottom: 15px;
+} 
+.c7-name,.c7-mail,.c7-title{
+  height: 40px;
+  border:solid 1px gray ;
 }
 
+.wpcf7-submit{
+  display: inline-block;
+  border:solid 1px black;
+  padding:10px 20px;
+  align-items:right;
+  background-color: #c5c5c5;
 
-.text-center > button{
-  background-color: black;
-  color:white;
+}
+.wpcf7-textarea{
+  border:solid 1px gray ;  
 }
 
 
@@ -681,8 +781,13 @@ background-color: #dedede;
 /*////////////////////////////////////*/
 
 .thankyou{
-  margin: 400px 0px 400px 0px;
+  margin: 300px;
   font-size:30px;
+  text-align: center;
+}
+
+.thank_title{
+  margin-bottom: 5px;
 }
 
 
@@ -690,22 +795,18 @@ background-color: #dedede;
 /*///////////  related-post //////////*/
 /*////////////////////////////////////*/
 
-.wp_rp_content{
-  margin-top:100px;
-}
-
 .related_post_title {
   font-size: 16px;
   text-align: center;
   margin-top:40px;
 }
-ul.related_post {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin:30px auto;
-}
+/*ul.related_post {
+  max-width: 100%!important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  margin:30px auto !important;
+}*/
 ul.related_post li {
   max-width: 150px;
   
@@ -735,7 +836,8 @@ ul.related_post li img {
 /*////////////////////////////////////*/
 
 .basic-yop-poll-container{
-  padding:5px;
+  padding:2px;
+  margin:auto;
 }
 
 
@@ -744,6 +846,29 @@ ul.related_post li img {
     background-color: #900;
 
 }
+.basic-question-title{
+  font-size: 1.1rem !important;
+}
+.basic-text{
+  font-weight: 300;
+  font-size: 19px;
+}
+.basic-yop-poll-container{
+  width:90% !important;
+} 
+
+
+/*////////////////////////////////////*/
+/*///////////  SNS  //////////*/
+/*////////////////////////////////////*/
+
+#the_champ_fb_commenting{
+  margin-top: 20px;
+}
+
+
+
+
 
 
 
@@ -775,6 +900,7 @@ ul.related_post li img {
   display: flex;
   align-items: center;
   margin:20px auto;
+  min-width: 730px;
 }
 
 .post-thumbnail img{
@@ -865,6 +991,30 @@ ul.related_post li img {
 }
 
 /*////////////////////////////////////*/
+/*///////////  sarch.php  //////////*/
+/*////////////////////////////////////*/
+
+.sc_submit{
+  padding:10px;
+  border: solid 1px gray; 
+}
+
+.form{
+  height:45px;
+  border: solid 1px gray;
+  text-indent:1em; 
+}
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////*/
 /*/////// single-staff.php  //////////*/
 /*////////////////////////////////////*/
 .single-staff{
@@ -940,56 +1090,19 @@ ul.related_post li img {
 footer{
   background-color: #000;
   color: white;
-  height: 100px;
-  padding-bottom: 10px;
+  height: auto;
+  padding-bottom: 20px;
 }
-
-.footer-container{
-  display: flex;
-  align-items: center;
+.footer-menu{
+  flex-direction: column;
   justify-content: center;
-  height:90px;
-  margin:auto;
+  margin-top:3px;
 }
-
-.ft-conent{
-  margin-top:10px;
-}
-
-.ft-container1{
-  display: flex;
-  justify-content: center;
-  align-items:center;
-
-}
-#menu-menu3 li:last-child{
-  margin-right:50px;
-
-}
-.sponsor-container{
-  display: flex;
-  padding:0px;
-}
-
-.sponsor-container li {
-  margin-right:15px;
-}
-
-.sponsor-container li:last-child{
-  margin-right: 0px;
-}
-
-.sponsor-container li img{
-  width: 200px;
-}
-
 
 #menu-menu3{
   justify-content: space-between;
   margin-right:0px;
-  height: 70px;
-  align-items:flex-start;
-  padding-top:6px;
+  height: auto;
 }
 #menu-menu3 li:first-child{
   margin-left:0px;
@@ -999,18 +1112,26 @@ footer{
   color: white;
 }
 
-.footer-corp{
+.footer_img{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.footer_img >img{
+  height: 50px;
+}
+
+.footer-add{
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
-  padding-right: 38px;
-  font-size: 15px;  
+  padding-top: 15px;
 }
 
 .corp-data{
   display: flex;
-  align-items:center;
+  margin-top:10px;
 }
 
 .corp-data-left,
@@ -1024,8 +1145,7 @@ footer{
 
 
 .footer-corp h2{
-  text-align: center;
-  margin-bottom: 10px;
+  margin:0px auto;
 }
 
 .footer-corp li >span{
@@ -1033,11 +1153,6 @@ footer{
   width: 30px;
   letter-spacing: 5px;
 
-}
-
-.footer-corp li:nth-child(1)>span,
-.footer-corp li:nth-child(3)>span{
-  letter-spacing: 35px;
 }
 
 

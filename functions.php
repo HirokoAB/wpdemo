@@ -338,6 +338,81 @@ function new_excerpt_more($more){
 add_filter('excerpt_more','new_excerpt_more',9999);
 
 
+//////////////////////////////////////////
+////  wp_head()吐き出しコードの調整　///////
+/////////////////////////////////////////
+
+
+remove_action('wp_head', 'wp_resource_hints', 2);
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles' );
+remove_action('admin_print_styles', 'print_emoji_styles');
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+remove_action('wp_head', 'wp_oembed_add_host_js');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'rel_canonical');
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+//////////////////////////////////////////
+////  contact form 7のjsとcssを停止　//////
+/////////////////////////////////////////
+
+function my_remove_cf7_js_css() {
+
+    add_filter( 'wpcf7_load_js', '__return_false' );
+    add_filter( 'wpcf7_load_css', '__return_false' );
+
+}
+add_action( 'after_setup_theme', 'my_remove_cf7_js_css' );
+
+//////////////////////////////////////////
+// contact form 7のjsとcssを読み込み　/////
+/////////////////////////////////////////
+
+/**
+ *    contact form 7のjsとcssを読み込み
+ */
+function my_enable_cf7_js_css() {
+  /**
+   * スラッグが「contact」のページだけ読み込み
+   */
+    if( is_page( 'ask' )  ) {
+        if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+            wpcf7_enqueue_scripts();
+        }
+
+    }
+}
+add_action( 'wp_enqueue_scripts', 'my_enable_cf7_js_css' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
