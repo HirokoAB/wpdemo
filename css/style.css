@@ -118,8 +118,8 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 55px auto 0px auto; 
-
+  margin: 44px auto 0px auto; 
+}
 
 .calendar_wrap{
   margin-top: 40px;
@@ -352,8 +352,8 @@ a{
 .date{
   margin-top: 16px;
   margin-left: 20px;
-}
 
+} 
 
 
 .article-upper{
@@ -362,10 +362,15 @@ a{
   flex-direction: column;
 }
 
-.single-container{
-  margin-top: 300px;
+.article-lower{
+  margin-top:100px;
 }
 
+
+.latest_title{
+  width: 760px;
+  margin:auto;
+} 
 
 .cat-data ul {
   margin-bottom: 10px; }
@@ -445,16 +450,15 @@ a{
 
 
 .latest_title{
+  width: 760px;
   margin:auto;
   font-size: 20px;
+  text-align: center;
   margin-top: 100px;
   background-color: #E7EAEB;
   font-weight: bold;
   text-align: left;
-  padding: 10px;  
-  width: 100%;
-
-}
+  padding: 10px;  }
 
 .article_loop {
   display: -webkit-box;
