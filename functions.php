@@ -4,8 +4,8 @@
 	$defaults = array(
 	'default-image'         => get_template_directory_uri() . '/img/visual_2_pc.png', //デフォルト画像
 	'random-default'         => false, //ランダム表示
-	'width'                  => '1027', //幅
-	'height'                 => '448', //高さ
+	'width'                  => 1165, //幅
+	'height'                 => 400, //高さ
 	'flex-height'            => false, //フレキシブル対応（高さ）
 	'flex-width'             => false, //フレキシブル対応（幅）
 	'default-text-color'     => '', //デフォルトのテキストの色
@@ -18,6 +18,41 @@
 
 
 add_theme_support( 'custom-header', $defaults );
+
+//////////////////////////////////////////
+//////画像を任意の大きさで切り取る設定//////
+/////////////////////////////////////////
+
+function add_custom_image_sizes() {
+    global $my_custom_image_sizes;
+    $my_custom_image_sizes = array(
+        'original_thumb_crop' => array(
+            'name'       => 'footer切り抜き', // 選択肢のラベル名
+            'width'      => 300,    // 最大画像幅をpxで設定
+            'height'     => 100,    // 最大画像高さをpxで設定	
+            'crop'       => true,  // 切り抜きを行うならtrue, 行わないならfalse
+            'selectable' => true   // 選択肢に含めるならtrue, 含めないならfalse
+        )
+    );
+    foreach ( $my_custom_image_sizes as $slug => $size ) {
+        add_image_size( $slug, $size['width'], $size['height'], $size['crop'] );
+    }
+}
+add_action( 'after_setup_theme', 'add_custom_image_sizes' );
+
+function add_custom_image_size_select( $size_names ) {
+    global $my_custom_image_sizes;
+    $custom_sizes = get_intermediate_image_sizes();
+    foreach ( $custom_sizes as $custom_size ) {
+        if ( isset( $my_custom_image_sizes[$custom_size]['selectable'] ) && $my_custom_image_sizes[$custom_size]['selectable'] ) {
+            $size_names[$custom_size] = $my_custom_image_sizes[$custom_size]['name'];
+        }
+    }
+    return $size_names;
+}
+add_filter( 'image_size_names_choose', 'add_custom_image_size_select' );
+
+
 
 
 //////////////////////////////////////////
@@ -59,13 +94,14 @@ function cptui_register_my_cpts_infomation() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => true,
-		"rewrite" => array( "slug" => "info", "with_front" => true ),
+		"rewrite" => array( "slug" => "infomation", "with_front" => true ),
 		"query_var" => true,
 		"supports" => array( "title", "editor", "thumbnail" ),
 	);
 
 	register_post_type( "infomation", $args );
 }
+ add_action( 'init', 'cptui_register_my_cpts_infomation' );
 
 
 	function cptui_register_my_cpts_slider() {
@@ -116,8 +152,6 @@ function cptui_register_my_cpts_infomation() {
 add_action( 'init', 'cptui_register_my_cpts_slider' );
 
 
-
-add_action( 'init', 'cptui_register_my_cpts_infomation' );
 function cptui_register_my_taxes_info() {
 
 	/**
@@ -151,11 +185,66 @@ function cptui_register_my_taxes_info() {
 }
 add_action( 'init', 'cptui_register_my_taxes_info' );
 
+
+
+
+$parent_term_id = $parent_term[ '43' ]; // ターム ID（数値）を取得
+wp_insert_term(
+  '商品入荷のお知らせ', // ターム名
+  'お知らせ', // タクソノミー
+  array(
+    'description'=> 'Inform from Staff.',
+    'parent'=> $parent_term_id
+  )
+);
+
+
+////////////////////////////////////////
+//////footer menu追加に関するコード///////
+////////////////////////////////////////
+
+register_nav_menu( 'footer-menu' , 'フッターメニュー' );
+
+
+
+
 //////////////////////////////////////////
 //////ウィジェットに追加に関するコード///////
 /////////////////////////////////////////
 
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'サイドバー1',
+ 'id' => 'sidebar1',
+ "before_widget" => '<div class="%2$s">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
 
+
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'サイドバー2',
+ 'id' => 'sidebar2',
+ "before_widget" => '<div class="%2$s">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
+
+if (function_exists('register_sidebar')) {
+ register_sidebar(array(
+ 'name' => 'フッターバ-1',
+ 'id' => 'footer1',
+ "before_widget" => '<li class="%2$s">',
+ 'after_widget' => '</li>',
+ 'before_title' => '<h3 class="widgettitle">',
+ 'after_title' => '</h3>'
+ ));
+}
 
 function twp_setup_theme(){
 	//サムネイル画像を表示させるPHP
@@ -165,9 +254,9 @@ function twp_setup_theme(){
 add_action( 'after_setup_theme', 'twp_setup_theme' );
 
 
-/////////////////////////
-//////パンクスリスト///////
-/////////////////////////
+//////////////////////////////////////////
+/////////////パンくずリスト////////////////
+/////////////////////////////////////////
 function breadcrumb(){
     global $post;
     $str ='';
@@ -208,24 +297,6 @@ $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="di
     echo $str;
 }
 
-//////////////////////////////////////////
-//jackpackのデバックモードを開示するコード///
-/////////////////////////////////////////
-
-
-add_filter( 'jetpack_development_mode', '__return_true' );
-
-
-//////////////////////////////////////////
-////カスタム投稿タイプが削除された際に////////
-///テーブルのデータを削除する///////////////
-/////////////////////////////////////////
-// function my_acf_init() {
-// 	if (function_exists('acf_update_setting')) {
-// 		acf_update_setting('remove_wp_meta_box', false);
-// 	}
-// }
-// add_action('acf/init', 'my_acf_init');
 
 
 
@@ -243,6 +314,91 @@ function show_contact_form() {
   return ob_get_clean();
 }
 add_shortcode('slider', 'show_contact_form');
+
+
+//////////////////////////////////////////
+////////////  archiveの文字数 /////////////
+/////////////////////////////////////////
+
+
+function cus_excerpt_length($length){
+	return 80;
+}
+add_filter(' excerpt_length ' , 'cus_excerpt_length' );
+
+
+//////////////////////////////////////////
+//////////  記事一覧の続きの表示　　/////////
+/////////////////////////////////////////
+
+function new_excerpt_more($more){
+    global $post;
+    return '...';
+}
+add_filter('excerpt_more','new_excerpt_more',9999);
+
+
+//////////////////////////////////////////
+////  wp_head()吐き出しコードの調整　///////
+/////////////////////////////////////////
+
+
+remove_action('wp_head', 'wp_resource_hints', 2);
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles' );
+remove_action('admin_print_styles', 'print_emoji_styles');
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+remove_action('wp_head', 'wp_oembed_add_host_js');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'rel_canonical');
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+//////////////////////////////////////////
+////  contact form 7のjsとcssを停止　//////
+/////////////////////////////////////////
+
+function my_remove_cf7_js_css() {
+
+    add_filter( 'wpcf7_load_js', '__return_false' );
+    add_filter( 'wpcf7_load_css', '__return_false' );
+
+}
+add_action( 'after_setup_theme', 'my_remove_cf7_js_css' );
+
+//////////////////////////////////////////
+// contact form 7のjsとcssを読み込み　/////
+/////////////////////////////////////////
+
+/**
+ *    contact form 7のjsとcssを読み込み
+ */
+function my_enable_cf7_js_css() {
+  /**
+   * スラッグが「contact」のページだけ読み込み
+   */
+    if( is_page( 'ask' )  ) {
+        if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+            wpcf7_enqueue_scripts();
+        }
+
+    }
+}
+add_action( 'wp_enqueue_scripts', 'my_enable_cf7_js_css' );
+
+
+
+
+
+
+
+
 
 
 
