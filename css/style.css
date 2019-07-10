@@ -699,21 +699,22 @@ a{
 /*////////////////////////////////////*/
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
+
+.form-width { 
+  max-width: 100%;
+}
+
+
 .wpcf7{
   max-width: 100%;
   margin:auto;
 }
-
-.wpcf7 input,
-.wpcf7 textarea{
-  width: 816px;
-}
-
      
 .wpcf7-form label{
   margin-bottom: 15px;
 } 
-.c7-name,.c7-mail,.c7-title{
+
+.wpcf7-form-control{
   height: 40px;
   border:solid 1px gray ;
 }
@@ -729,6 +730,7 @@ a{
 .wpcf7-textarea{
   border:solid 1px gray ;  
 }
+
 
 
 
