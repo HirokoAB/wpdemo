@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   z-index: 999;
-  margin-top: -30px;
+  margin-top: -33px;
   background-color: white;
 }
 html,body{
@@ -69,7 +69,7 @@ a{
 .head-img{
   padding-top: 35px;
 }
-.head-img > img{
+.head-img img{
   height: 50px;
 }
 

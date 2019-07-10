@@ -29,7 +29,7 @@
         <div class="head-contents row">
 
             <div class="head-img col-xl-2">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png">
+              <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/corporate.png"></a> 
             </div>
 
             <div class="nav col-xl-10 col-lg-12">
