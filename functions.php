@@ -1,5 +1,19 @@
 <?php
 
+////////////////////////////////////////
+//CSS/JSをheader/footerに読み込むコード///
+////////////////////////////////////////
+
+//add_action( 'wp_enquence_scripts' , function(){
+
+//登録して出力キューに追加
+    //wp_enquence_script( 'my-main',
+    //get_template_directory_uri().'/js/app.js'
+//);
+
+//});
+
+
 //header画像投稿の設定のためのファンクション
 	$defaults = array(
 	'default-image'         => get_template_directory_uri() . '/img/visual_2_pc.png', //デフォルト画像
