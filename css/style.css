@@ -682,18 +682,22 @@ a{
 
 
 
-/*/////singleのパンくずリスト///////////*/
+/*////////////////////////////////////*/
+/*///////////  bread crumbs//////////*/
+/*////////////////////////////////////*/
 
-.breadcrumbs{
-  max-width: 1000px;
-  margin-bottom: 20px;
+.breadcrumbs li{
+  display: inline-block
 }
 
-.breadcrumbs span{
-  font-size:13px;
+.breadcrumbs a,span{
+ font-size:13px;
 }
 
-
+.breadcrumbs a::after{
+white-space: pre-wrap;
+content:" > ";
+}
 
 
 /*////////////////////////////////////*/

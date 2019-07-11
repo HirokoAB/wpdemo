@@ -12,12 +12,13 @@
   ));
 
   ?>
-                  <div class="breadcrumbs">
-                    <?php custom_breadcrumb(); ?>
-                  </div>
 
 
 <div class="article_archive">
+                    <div class="breadcrumbs">
+                    <?php custom_breadcrumb(); ?>
+                  </div>
+
             <p class="latest_title">ブログ記事一覧</p>
            <p><?php echo single_term_title(); ?></p>
               <div class="article_loop">
