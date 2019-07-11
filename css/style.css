@@ -877,10 +877,20 @@ ul.related_post li img {
 /*///////////  SNS  //////////*/
 /*////////////////////////////////////*/
 
-#the_champ_fb_commenting{
-  margin-top: 20px;
+.sns{
+  margin-top:40px;
+}
+.fb-page {
+    float: left;
+    width: 48.3871%;
+    border: 1px solid #cccccc;
 }
 
+.twitter{
+  float:right;
+  width: 48.3871%;
+  border:solid 1px #cccccc;
+}
 
 
 
