@@ -8,7 +8,7 @@
 					<!-- Articlee upper -->
 					<div class="article-upper" style="height: auto;">
 						<div class="breadcrumbs">
-		            		<?php breadcrumb(); ?>
+		            		<?php custom_breadcrumb(); ?>
 		          		</div>
 						<div class="article_img">
 		                	<?php the_post_thumbnail('large'); ?>
