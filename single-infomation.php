@@ -11,7 +11,6 @@
 		            		<?php custom_breadcrumb(); ?>
 		          		</div>
 						<div class="article_img">
-		                	<?php the_post_thumbnail('large'); ?>
 		              	</div>
 		              	<div class="info-cate">
 				          <?php $term = wp_get_post_terms( $post -> ID ,'info',array("fields" => "names")); ?>

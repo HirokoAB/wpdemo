@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">	
 		<div class="breadcrumbs">
-	     <?php breadcrumb(); ?>
+	     <?php custom_breadcrumb(); ?>
 		</div>
 
 		<?php if(have_posts()): the_post(); ?> 

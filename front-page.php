@@ -16,8 +16,16 @@
   <div class="container">
     <div class="row">
       <div class="col-9">
+        <div>
         <?php get_template_part( 'taxonomy' , 'info' ); ?>
+        </div>
+        <div>
+        <?php dynamic_sidebar('フッターバ-1'); ?>
+        </div>
       </div>
+
+
+
       <div class="col-3">
         <?php dynamic_sidebar('サイドバー2'); ?>
       </div>
