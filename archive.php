@@ -12,6 +12,9 @@
   ));
 
   ?>
+                  <div class="breadcrumbs">
+                    <?php custom_breadcrumb(); ?>
+                  </div>
 
 
 <div class="article_archive">
