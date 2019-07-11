@@ -8,6 +8,10 @@
 	?>
 <main>
 
+						<div class="breadcrumbs">
+		            		<?php custom_breadcrumb(); ?>
+		          		</div>
+
 	<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
 	<?php $loop  = new WP_Query(array(
     "paged" => $paged,
@@ -22,9 +26,7 @@
 
 	<?php 
 	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
-	<?php //if(have_posts()) : //?>
-	<?php //while(have_posts()) : the_post(); ?>
-	<?php //var_dump($loop); ?>
+
 
 
 	<div class="staff-info col-3">

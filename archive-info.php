@@ -11,7 +11,9 @@
       'posts_per_page' => 5,
       'post_type' => 'infomation' 
   );?>
-
+                  <div class="breadcrumbs">
+                    <?php custom_breadcrumb(); ?>
+                  </div>
 
 <div class="info-container">
     <p class="info_title">お知らせ一覧</p>

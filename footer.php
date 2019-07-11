@@ -49,6 +49,5 @@
 		 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.3&appId=353015218733138&autoLogAppEvents=1"></script>
 		 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 </body>
 </html>
