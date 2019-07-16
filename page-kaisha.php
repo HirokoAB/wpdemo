@@ -2,10 +2,13 @@
 <?php get_header(); ?>
 
 <main>
-<div class="container">
+
 	<div class="breadcrumbs">
      <?php custom_breadcrumb(); ?>
-</div> 
+
+	</div>
+<div class="container kaisha-con"> 
+
 <div class="row kaihsa-img">	
 <img src="<?php echo get_template_directory_uri(); ?>/img/kaisha.jpg" alt="">
 </div>
