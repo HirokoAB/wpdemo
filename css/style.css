@@ -503,6 +503,7 @@ a{
 /*////////////////////////////////////*/
 /*//////////以下最新の投稿一覧//////////*/
 /*////////////////////////////////////*/
+
 .info_title{
   font-size:20px;
 
@@ -545,13 +546,23 @@ a{
 
 /*/////singleのパンくずリスト///////////*/
 
-.breadcrumbs{
-  max-width: 1000px;
-  margin: 50px 10px;
+#breadcrumb{
+  position: absolute;
+  left:20%;
+  top:10%;
+}
+.breadcrumbs li{
+  display: inline-block
 }
 
 .breadcrumbs span{
   font-size:13px;
+}
+
+.breadcrumbs a::after{
+white-space: pre-wrap;
+content:" > ";
+
 }
 
 
@@ -600,8 +611,8 @@ font-size:15px;
 /*////////////////////////////////////*/
 /*///////////  page-kaisha //////////*/
 /*////////////////////////////////////*/
-.kaisha-container{
-  margin:200px auto 200px auto;
+.kaisha-con{
+  margin:150px auto 159px auto;
 
 }
 .kaisha{
@@ -648,10 +659,6 @@ background-color: #dedede;
 
 .list-btn{
   text-align: center;
-}
-
-.breadcrumbs{
-  margin-right:200px;
 }
 
 
