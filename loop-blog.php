@@ -1,10 +1,19 @@
-<?php query_posts("posts_per_page=2&paged+$paged"); ?>
+
+	<?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ;  ?>
+	<?php $loop  = new WP_Query(array(
+    "paged" => $paged,
+    "posts_per_page" => 4,
+    "post_status" => "publish"
+  	));?>
+
+
 <!-- ここから記事取得のループ -->
-	<?php if ( have_posts() ) : ?>
-    <?php while(have_posts()) : the_post(); ?>
-    	<div class="container">
-    	<div class= "row">
-        <div class="col-8 archive-container">
+
+	<?php 
+	if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
+
+
+        <div class=" archive-container">
 	        <div class="post-thumbnail">
 	            <a href="<?php the_permalink() ?>">
 	            <?php if (has_post_thumbnail()): ?>
@@ -41,12 +50,18 @@
 
 
 	    </div>
-	    </div>
-	    </div>
+
     
     <?php endwhile; ?>
+    		<?php echo '<div class="pg_nav">'.paginate_links(array(
+             'total' => $loop -> max_num_pages
+      )); ?>
+
     <?php endif; ?>
 
+
+
+     
 
 	
 

@@ -1,8 +1,5 @@
 <?php 
 
-	/*
-	Template Name:Archives
-	*/
 	get_header();
 	?>
   <!-- 表示件数を指定するための配列 -->

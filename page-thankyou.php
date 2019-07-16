@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 
-<div class="thankyou"> <h1>お問い合わせ</h1><br>
-	<h1>Thank You Page Sample!</h1></div>
+						<div class="breadcrumbs">
+		            		<?php custom_breadcrumb(); ?>
+		          		</div>
+
+<div class="thankyou">
+	<h1 class="thank_title">お問い合わせありがとうございました。</h1>
+	<p>〇〇日以内にご返信させていただきます。</p>	
+</div>
 
  <?php get_footer(); ?>
