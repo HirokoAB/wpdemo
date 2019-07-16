@@ -704,13 +704,14 @@ content:" > ";
 /*///////////  contact form//////////*/
 /*////////////////////////////////////*/
 
-.form-width { 
-  max-width: 100%;
-}
-
 
 .wpcf7{
-  max-width: 100%;
+  margin: 100px auto;
+  display: flex;
+  align-items:center;
+}
+
+.wpcf7-form{
   margin:auto;
 }
      
@@ -720,7 +721,11 @@ content:" > ";
 
 .wpcf7-form-control{
   height: 40px;
-  border:solid 1px gray ;
+  border:solid 1px gray;
+}
+.wpcf7-textarea{
+  width: 671px;
+  height: 200px;
 }
 
 .wpcf7-submit{
@@ -731,10 +736,6 @@ content:" > ";
   background-color: #c5c5c5;
 
 }
-.wpcf7-textarea{
-  border:solid 1px gray ;  
-}
-
 
 
 
