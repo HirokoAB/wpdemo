@@ -5,7 +5,6 @@
 
 	<div class="breadcrumbs">
      <?php custom_breadcrumb(); ?>
-
 	</div>
 <div class="container kaisha-con"> 
 
