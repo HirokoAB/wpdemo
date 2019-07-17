@@ -693,7 +693,7 @@ a{
 #breadcrumb{
   position: absolute;
   left:20%;
-  top:10%;
+  top:15%;
 }
 
 .breadcrumbs li{
@@ -1146,7 +1146,7 @@ footer{
 
 .footer_img{
   display: flex;
-  align-items:center;
+  align-items:center:;
   justify-content: space-between;
 }
 .footer_img >img{
